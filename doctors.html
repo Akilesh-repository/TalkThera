@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Specialists & Doctors - TALKTHERA Speech & Language Center</title>
+    <script src="tailwind.js"></script>
+    <link rel="icon" type="image/png" href="images\images.jpg">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontWeight: {
+                        semibold: '500',
+                        bold: '600',
+                        extrabold: '800',
+                        black: '900'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* === RESET & CORE === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            transition: background-color 0.3s, color 0.3s;
+            overflow-x: hidden;
+        }
+
+        /* === THEME VARIABLES === */
+        :root {
+            --bg-color: #FAFAFA;
+            --bg-secondary: #EFF6FF;
+            --bg-card: #FFFFFF;
+            --text-main: #0F172A;
+            --text-muted: #64748B;
+            --accent-color: #2563EB;
+            --accent-dark: #1D4ED8;
+            --border-color: #E2E8F0;
+            --nav-bg: rgba(255, 255, 255, 0.85);
+            --drawer-bg: rgba(255, 255, 255, 0.98);
+            --menu-hover-bg: #EFF6FF;
+        }
+
+        body.dark-mode {
+            --bg-color: #0F172A;
+            --bg-secondary: #1E293B;
+            --bg-card: #1E293B;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --accent-color: #60A5FA;
+            --accent-dark: #3B82F6;
+            --border-color: #334155;
+            --nav-bg: rgba(15, 23, 42, 0.85);
+            --drawer-bg: rgba(15, 23, 42, 0.98);
+            --menu-hover-bg: rgba(96, 165, 250, 0.1);
+        }
+
+        [dir="rtl"] {
+            text-align: right;
+        }
+
+        [dir="rtl"] .ml-auto {
+            margin-right: auto;
+            margin-left: 0;
+        }
+
+        [dir="rtl"] .mr-auto {
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        @keyframes subtleZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+
+        .animate-zoom {
+            animation: subtleZoom 20s infinite alternate ease-in-out;
+        }
+
+        /* === FLOATING NAVBAR DESIGN === */
+        .navbar {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
+            max-width: 1440px;
+            z-index: 1000;
+            background: var(--nav-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(37, 99, 235, 0.15);
+            border-radius: 9999px;
+            padding: 0 32px;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 40px -10px rgba(37, 99, 235, 0.1);
+        }
+
+        body.dark-mode .navbar {
+            border-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar.scrolled {
+            top: 12px;
+            width: 95%;
+            border-radius: 9999px;
+            height: 70px;
+            border: 1px solid var(--border-color);
+            background: var(--nav-bg);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.15);
+        }
+
+        body.dark-mode .navbar.scrolled {
+            background: rgba(15, 23, 42, 0.95);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* === MINIMAL UNDERLINE HOVER STYLE === */
+        .nav-link {
+            padding: 8px 4px;
+            margin: 0 10px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--accent-color);
+        }
+
+        /* Dropdowns */
+        .dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 65px;
+            left: 0;
+            transform: translateY(15px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 100;
+        }
+
+        .navbar.scrolled .dropdown-menu {
+            top: 55px;
+        }
+
+        .dropdown-inner {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            min-width: 240px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        body.dark-mode .dropdown-inner {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 12px 16px;
+            border-radius: 8px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .dropdown-item:hover {
+            background: var(--menu-hover-bg);
+            color: var(--accent-color);
+            transform: translateX(4px);
+        }
+
+        [dir="rtl"] .dropdown-item:hover {
+            transform: translateX(-4px);
+        }
+
+        /* === ICON BUTTONS === */
+        .icon-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--bg-secondary);
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-weight: 800;
+        }
+
+        .icon-btn:hover {
+            background: var(--accent-color);
+            color: #fff;
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+        }
+
+        /* === BUTTON DESIGNS === */
+        .btn {
+            padding: 12px 28px;
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 9999px;
+            border: none;
+            text-decoration: none;
+        }
+
+        .btn-solid {
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+            color: #FFFFFF !important;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-solid:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-outline {
+            background: var(--bg-secondary);
+            color: var(--accent-color) !important;
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--accent-color);
+            color: #FFFFFF !important;
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* MOBILE OVERLAY & HAMBURGER */
+        .drawer-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
+        }
+
+        .drawer-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .fullscreen-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            max-width: 400px;
+            height: 100dvh;
+            background: var(--drawer-bg);
+            z-index: 1001;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(100%);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border-left: 1px solid var(--border-color);
+        }
+
+        [dir="rtl"] .fullscreen-menu {
+            right: auto;
+            left: 0;
+            transform: translateX(-100%);
+            border-left: none;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .fullscreen-menu.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        .mobile-link {
+            display: block;
+            width: 100%;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-main);
+            text-decoration: none;
+            transition: all 0.3s;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-link:hover {
+            color: var(--accent-color);
+            padding-left: 40px;
+            background: var(--menu-hover-bg);
+        }
+
+        [dir="rtl"] .mobile-link:hover {
+            padding-left: 32px;
+            padding-right: 40px;
+        }
+
+        /* === DOCTOR CARD STYLES === */
+        .doctor-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 28px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-color);
+            box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.2);
+        }
+
+        body.dark-mode .doctor-card:hover {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.65);
+        }
+
+        .doctor-img-box {
+            position: relative;
+            width: 100%;
+            height: 330px;
+            overflow: hidden;
+            background: #1e293b;
+        }
+
+        .doctor-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .doctor-card:hover .doctor-img-box img {
+            transform: scale(1.06);
+        }
+
+        .doctor-img-gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 50%, rgba(15, 23, 42, 0.85) 100%);
+            pointer-events: none;
+        }
+
+        .filter-btn {
+            padding: 10px 22px;
+            border-radius: 9999px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+            background: var(--bg-card);
+            color: var(--text-muted);
+        }
+
+        .filter-btn:hover {
+            color: var(--text-main);
+            border-color: var(--accent-color);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+            color: #ffffff;
+            border-color: transparent;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
+        }
+
+        .badge-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            border-radius: 9999px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding-top: 80px;
+        }
+
+        body.dark-mode footer {
+            border-color: var(--border-color);
+        }
+
+        footer h4 {
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        footer a,
+        footer li,
+        footer span {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+            font-weight: 400;
+        }
+
+        footer a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-link-circle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            color: var(--text-main);
+            background: transparent;
+        }
+
+        .social-link-circle:hover {
+            background: var(--accent-color);
+            border-color: var(--accent-color);
+            color: #FFFFFF;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding: 32px 0;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar" id="main-nav">
+        <div class="w-full flex items-center justify-between mx-auto">
+            <div class="flex items-center flex-shrink-0">
+                <a href="index.html" class="inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight uppercase"
+                    style="color: var(--text-main) !important; text-decoration: none;">
+                    <i class="fas fa-comment-medical" style="color: var(--accent-color); font-size: 1.4rem;"></i>
+                    TALKTHERA
+                </a>
+            </div>
+
+            <div class="hidden xl:flex justify-center items-center flex-1">
+                <div class="dropdown">
+                    <div class="nav-link">Home <i class="fas fa-chevron-down text-[9px] ml-1 opacity-50"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-inner">
+                            <a href="index.html" class="dropdown-item">Home Page 1</a>
+                            <a href="home-2.html" class="dropdown-item">Home Page 2</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="doctors.html" class="nav-link active">Doctors</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <div class="hidden xl:flex items-center gap-3">
+                <button id="theme-toggle-desktop" class="icon-btn" title="Toggle Dark Mode">
+                    <i class="fas fa-moon" id="theme-icon-desktop"></i>
+                </button>
+                <button id="rtl-btn" class="icon-btn" title="Toggle LTR/RTL">
+                    LTR
+                </button>
+                <a href="bookings.html" class="btn btn-solid !py-2.5 !px-5 whitespace-nowrap">
+                    Book Now
+                </a>
+            </div>
+
+            <div class="2xl:hidden flex items-center justify-end gap-4">
+                <button id="mobile-btn"
+                    class="text-2xl text-[var(--text-main)] transition-colors hover:text-[var(--accent-color)]">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HAMBURGER / MOBILE MENU ================= -->
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <div class="fullscreen-menu" id="fullscreen-menu">
+        <div class="w-full px-8 py-6 flex justify-between items-center shrink-0 border-b border-[var(--border-color)]">
+            <a href="index.html" class="text-xl font-bold tracking-tight uppercase block flex items-center gap-2"
+                style="color: var(--text-main) !important; text-decoration: none;">
+                <i class="fas fa-comment-medical" style="color: var(--accent-color);"></i> TALKTHERA
+            </a>
+            <button id="close-menu"
+                class="w-10 h-10 rounded-full flex items-center justify-center transition-all text-xl text-[var(--text-main)] hover:bg-[var(--bg-secondary)] hover:text-[var(--accent-color)]">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="flex flex-col w-full overflow-y-auto flex-1 py-4">
+            <a href="index.html" class="mobile-link">Home Page 1</a>
+            <a href="home-2.html" class="mobile-link">Home Page 2</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="services.html" class="mobile-link">Services</a>
+            <a href="pricing.html" class="mobile-link">Pricing</a>
+            <a href="blog.html" class="mobile-link">Blog</a>
+            <a href="faq.html" class="mobile-link">FAQ</a>
+            <a href="doctors.html" class="mobile-link" style="color: var(--accent-color);">Doctors</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+        <div class="w-full px-8 py-8 border-t border-[var(--border-color)] flex flex-col gap-6 shrink-0 bg-[var(--bg-secondary)]">
+            <div class="flex justify-between items-center w-full">
+                <div class="flex items-center gap-3">
+                    <span class="text-[var(--text-muted)] font-medium text-[10px] uppercase tracking-widest">Theme</span>
+                    <button id="theme-toggle-mobile" class="icon-btn">
+                        <i class="fas fa-moon" id="theme-icon-mobile"></i>
+                    </button>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-[var(--text-muted)] font-medium text-[10px] uppercase tracking-widest">Dir</span>
+                    <button id="rtl-toggle-mobile" class="icon-btn">LTR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= HERO BANNER ================= -->
+    <section class="relative w-full min-h-[60dvh] flex items-center justify-center overflow-hidden border-b border-[var(--border-color)] bg-[var(--bg-color)] py-32 lg:py-24">
+
+        <div class="absolute inset-0 z-0">
+            <img src="images\pexels-shkrabaanthony-7579180.jpg" alt="Clinical Specialists and Doctors"
+                class="w-full h-full object-cover animate-zoom" />
+            <div class="absolute inset-0 bg-gradient-to-b from-blue-900/85 via-slate-900/75 to-slate-900/90 dark:from-slate-900/95 dark:via-slate-900/85 dark:to-black backdrop-blur-[2px]"></div>
+        </div>
+
+        <div class="max-w-[1000px] mx-auto px-6 w-full flex flex-col items-center justify-center text-center relative z-10 mt-12 py-10">
+
+            <span class="bg-blue-600/20 text-blue-200 border border-blue-500/30 text-xs font-bold uppercase tracking-[0.25em] mb-6 px-6 py-2 rounded-full shadow-lg flex items-center gap-2 backdrop-blur-md">
+                <i class="fas fa-user-md text-lg"></i> Certified Medical Faculty
+            </span>
+
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6 text-white tracking-tight drop-shadow-xl">
+                Our Specialists & <br class="hidden sm:block">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">Expert Doctors</span>
+            </h1>
+
+            <p class="text-slate-200 text-base md:text-lg leading-relaxed max-w-2xl font-light mb-8 drop-shadow-md">
+                Meet our compassionate team of licensed speech-language pathologists, neurologists, and clinical specialists with verified credentials and specialized clinical expertise.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-3 text-xs uppercase font-bold tracking-wider text-blue-100">
+                <span class="bg-white/10 px-4 py-2 rounded-full border border-white/20 backdrop-blur-sm flex items-center gap-2">
+                    <i class="fas fa-certificate text-blue-400"></i> ASHA CCC-SLP Certified
+                </span>
+                <span class="bg-white/10 px-4 py-2 rounded-full border border-white/20 backdrop-blur-sm flex items-center gap-2">
+                    <i class="fas fa-graduation-cap text-blue-400"></i> Ph.D. & Masters Level Clinicians
+                </span>
+                <span class="bg-white/10 px-4 py-2 rounded-full border border-white/20 backdrop-blur-sm flex items-center gap-2">
+                    <i class="fas fa-shield-alt text-blue-400"></i> 100% Evidence-Based Practice
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= QUICK STATS HIGHLIGHT ================= -->
+    <section class="py-10 bg-[var(--bg-secondary)] border-b border-[var(--border-color)]">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4">
+                    <div class="text-3xl lg:text-4xl font-black text-[var(--accent-color)] mb-1">100%</div>
+                    <div class="text-xs uppercase font-bold text-[var(--text-muted)] tracking-wider">Board Certified Specialists</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl lg:text-4xl font-black text-[var(--accent-color)] mb-1">15+ Yrs</div>
+                    <div class="text-xs uppercase font-bold text-[var(--text-muted)] tracking-wider">Avg Clinical Experience</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl lg:text-4xl font-black text-[var(--accent-color)] mb-1">45,000+</div>
+                    <div class="text-xs uppercase font-bold text-[var(--text-muted)] tracking-wider">Therapy Sessions Conducted</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl lg:text-4xl font-black text-[var(--accent-color)] mb-1">98.4%</div>
+                    <div class="text-xs uppercase font-bold text-[var(--text-muted)] tracking-wider">Patient Goal Achievement</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= DOCTORS GRID SECTION (3x2 CARDS) ================= -->
+    <section class="py-24 bg-[var(--bg-color)] border-b border-[var(--border-color)]">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+
+            <!-- Section Title & Filter Tabs -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <span class="text-[var(--accent-color)] font-extrabold uppercase text-xs tracking-widest mb-3 block">
+                        Clinical Directory
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-black text-[var(--text-main)] tracking-tight">
+                        Meet Our Medical Team
+                    </h2>
+                    <p class="text-[var(--text-muted)] text-base mt-3 max-w-xl">
+                        Explore qualifications, institutional credentials, and primary areas of clinical focus for each of our speech-language pathologists and specialists.
+                    </p>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="flex flex-wrap gap-2" id="doctor-filters">
+                    <button class="filter-btn active" data-filter="all">All Specialists (6)</button>
+                    <button class="filter-btn" data-filter="pediatric">Pediatric</button>
+                    <button class="filter-btn" data-filter="neurological">Neurological</button>
+                    <button class="filter-btn" data-filter="voice">Voice & Fluency</button>
+                    <button class="filter-btn" data-filter="aac">AAC & Autism</button>
+                </div>
+            </div>
+
+            <!-- 3x2 Grid (3 columns, 2 rows) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="doctors-grid">
+
+                <!-- Doctor 1: Dr. Eleanor Vance -->
+                <div class="doctor-card" data-category="pediatric">
+                    <div class="doctor-img-box">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80"
+                            alt="Dr. Eleanor Vance, Ph.D., CCC-SLP" />
+                        <div class="doctor-img-gradient"></div>
+                        
+                        <!-- Floating Badges -->
+                        <div class="absolute top-4 left-4 z-10">
+                            <span class="bg-blue-600/90 text-white backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider shadow">
+                                Pediatric Care
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-slate-900/80 text-amber-300 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow border border-white/10">
+                                <i class="fas fa-star text-amber-400"></i> 4.9 (180+)
+                            </span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 z-10">
+                            <span class="text-white text-xs font-semibold flex items-center gap-2 drop-shadow">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                Accepting New Patients
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 md:p-8 flex flex-col flex-1">
+                        <!-- Name & Title -->
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-black text-[var(--text-main)] mb-1 flex items-center gap-2">
+                                Dr. Eleanor Vance
+                                <i class="fas fa-check-circle text-[var(--accent-color)] text-base" title="ASHA Verified Clinician"></i>
+                            </h3>
+                            <p class="text-xs font-extrabold uppercase tracking-wider text-[var(--accent-color)]">
+                                Clinical Director & Lead Pediatric SLP
+                            </p>
+                        </div>
+
+                        <!-- Qualifications & Degrees Box -->
+                        <div class="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-2xl p-4 mb-5">
+                            <span class="text-[10px] font-extrabold uppercase tracking-widest text-[var(--text-muted)] block mb-2">
+                                <i class="fas fa-graduation-cap text-[var(--accent-color)] mr-1"></i> Qualifications & Degrees
+                            </span>
+                            <ul class="text-xs space-y-1.5 text-[var(--text-main)] font-medium">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-[var(--accent-color)] text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>Ph.D. in Speech-Language Pathology</strong> &mdash; Harvard University</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-[var(--accent-color)] text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>M.S. Communication Disorders</strong> &mdash; Columbia University</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-award text-amber-500 text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>ASHA Certificate of Clinical Competence</strong> (CCC-SLP)</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Clinical Expertise Badges -->
+                        <div class="mb-5">
+                            <span class="text-[10px] font-extrabold uppercase tracking-widest text-[var(--text-muted)] block mb-2">
+                                <i class="fas fa-stethoscope text-[var(--accent-color)] mr-1"></i> Clinical Expertise
+                            </span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Childhood Apraxia (CAS)</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Pediatric Articulation</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Early Language Delays</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Parent Coaching</span>
+                            </div>
+                        </div>
+
+                        <!-- Doctor Quote / Philosophy -->
+                        <p class="text-xs italic text-[var(--text-muted)] leading-relaxed mb-6 border-l-2 border-[var(--accent-color)] pl-3">
+                            &ldquo;Every child possesses a unique inner voice. Our role is unlocking their communication through joyful, play-grounded evidence.&rdquo;
+                        </p>
+
+                        <!-- Bottom Card Meta & Action -->
+                        <div class="mt-auto pt-4 border-t border-[var(--border-color)] flex items-center justify-between gap-3">
+                            <div>
+                                <span class="text-[11px] text-[var(--text-muted)] block">Experience</span>
+                                <span class="text-sm font-black text-[var(--text-main)]">16+ Years</span>
+                            </div>
+                            <a href="bookings.html?doctor=dr-eleanor-vance" class="btn btn-solid !py-2.5 !px-5 text-xs whitespace-nowrap">
+                                Book Doctor <i class="fas fa-arrow-right ml-1.5 text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor 2: Dr. Julian Martinez -->
+                <div class="doctor-card" data-category="neurological">
+                    <div class="doctor-img-box">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80"
+                            alt="Dr. Julian Martinez, M.D., Ph.D." />
+                        <div class="doctor-img-gradient"></div>
+                        
+                        <!-- Floating Badges -->
+                        <div class="absolute top-4 left-4 z-10">
+                            <span class="bg-indigo-600/90 text-white backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider shadow">
+                                Neurological
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-slate-900/80 text-amber-300 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow border border-white/10">
+                                <i class="fas fa-star text-amber-400"></i> 5.0 (145+)
+                            </span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 z-10">
+                            <span class="text-white text-xs font-semibold flex items-center gap-2 drop-shadow">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                Accepting New Patients
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 md:p-8 flex flex-col flex-1">
+                        <!-- Name & Title -->
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-black text-[var(--text-main)] mb-1 flex items-center gap-2">
+                                Dr. Julian Martinez
+                                <i class="fas fa-check-circle text-[var(--accent-color)] text-base" title="ASHA & Medical Board Certified"></i>
+                            </h3>
+                            <p class="text-xs font-extrabold uppercase tracking-wider text-[var(--accent-color)]">
+                                Senior Neurogenic Rehabilitation Specialist
+                            </p>
+                        </div>
+
+                        <!-- Qualifications & Degrees Box -->
+                        <div class="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-2xl p-4 mb-5">
+                            <span class="text-[10px] font-extrabold uppercase tracking-widest text-[var(--text-muted)] block mb-2">
+                                <i class="fas fa-graduation-cap text-[var(--accent-color)] mr-1"></i> Qualifications & Degrees
+                            </span>
+                            <ul class="text-xs space-y-1.5 text-[var(--text-main)] font-medium">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-[var(--accent-color)] text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>M.D. in Clinical Neurology</strong> &mdash; Stanford University School of Medicine</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-[var(--accent-color)] text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>Ph.D. in Neuro-Communication</strong> &mdash; UCLA</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-award text-amber-500 text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>Certified Brain Injury Specialist</strong> (CBIS, CCC-SLP)</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Clinical Expertise Badges -->
+                        <div class="mb-5">
+                            <span class="text-[10px] font-extrabold uppercase tracking-widest text-[var(--text-muted)] block mb-2">
+                                <i class="fas fa-stethoscope text-[var(--accent-color)] mr-1"></i> Clinical Expertise
+                            </span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Post-Stroke Aphasia</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Traumatic Brain Injury (TBI)</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Dysarthria Management</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Cognitive Restoration</span>
+                            </div>
+                        </div>
+
+                        <!-- Doctor Quote / Philosophy -->
+                        <p class="text-xs italic text-[var(--text-muted)] leading-relaxed mb-6 border-l-2 border-[var(--accent-color)] pl-3">
+                            &ldquo;Neuroplasticity proves the brain can rewire. With structured, high-frequency therapy, adults can reclaim lost words.&rdquo;
+                        </p>
+
+                        <!-- Bottom Card Meta & Action -->
+                        <div class="mt-auto pt-4 border-t border-[var(--border-color)] flex items-center justify-between gap-3">
+                            <div>
+                                <span class="text-[11px] text-[var(--text-muted)] block">Experience</span>
+                                <span class="text-sm font-black text-[var(--text-main)]">14+ Years</span>
+                            </div>
+                            <a href="bookings.html?doctor=dr-julian-martinez" class="btn btn-solid !py-2.5 !px-5 text-xs whitespace-nowrap">
+                                Book Doctor <i class="fas fa-arrow-right ml-1.5 text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor 3: Dr. Sophia Al-Mansoor -->
+                <div class="doctor-card" data-category="voice">
+                    <div class="doctor-img-box">
+                        <img src="https://images.unsplash.com/photo-1594824813629-798835f8fc32?auto=format&fit=crop&w=800&q=80"
+                            alt="Dr. Sophia Al-Mansoor, M.S., BCS-F" />
+                        <div class="doctor-img-gradient"></div>
+                        
+                        <!-- Floating Badges -->
+                        <div class="absolute top-4 left-4 z-10">
+                            <span class="bg-cyan-600/90 text-white backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider shadow">
+                                Fluency & Stuttering
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-slate-900/80 text-amber-300 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow border border-white/10">
+                                <i class="fas fa-star text-amber-400"></i> 4.9 (160+)
+                            </span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 z-10">
+                            <span class="text-white text-xs font-semibold flex items-center gap-2 drop-shadow">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                Accepting New Patients
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 md:p-8 flex flex-col flex-1">
+                        <!-- Name & Title -->
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-black text-[var(--text-main)] mb-1 flex items-center gap-2">
+                                Dr. Sophia Al-Mansoor
+                                <i class="fas fa-check-circle text-[var(--accent-color)] text-base" title="Board Certified Fluency Specialist"></i>
+                            </h3>
+                            <p class="text-xs font-extrabold uppercase tracking-wider text-[var(--accent-color)]">
+                                Board-Certified Fluency & Stuttering Lead
+                            </p>
+                        </div>
+
+                        <!-- Qualifications & Degrees Box -->
+                        <div class="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-2xl p-4 mb-5">
+                            <span class="text-[10px] font-extrabold uppercase tracking-widest text-[var(--text-muted)] block mb-2">
+                                <i class="fas fa-graduation-cap text-[var(--accent-color)] mr-1"></i> Qualifications & Degrees
+                            </span>
+                            <ul class="text-xs space-y-1.5 text-[var(--text-main)] font-medium">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-[var(--accent-color)] text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>M.S. in Speech & Hearing Sciences</strong> &mdash; Northwestern University</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-award text-amber-500 text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>Board Certified Specialist in Fluency</strong> (BCS-F)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-[var(--accent-color)] text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>Certified Lidcombe & Camperdown</strong> Clinician</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Clinical Expertise Badges -->
+                        <div class="mb-5">
+                            <span class="text-[10px] font-extrabold uppercase tracking-widest text-[var(--text-muted)] block mb-2">
+                                <i class="fas fa-stethoscope text-[var(--accent-color)] mr-1"></i> Clinical Expertise
+                            </span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Developmental Stuttering</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Adult Cluttering</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Speech Anxiety (ACT)</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Public Speaking Confidence</span>
+                            </div>
+                        </div>
+
+                        <!-- Doctor Quote / Philosophy -->
+                        <p class="text-xs italic text-[var(--text-muted)] leading-relaxed mb-6 border-l-2 border-[var(--accent-color)] pl-3">
+                            &ldquo;Fluency therapy is not about erasing who you are. It is about empowering confident, uninhibited self-expression.&rdquo;
+                        </p>
+
+                        <!-- Bottom Card Meta & Action -->
+                        <div class="mt-auto pt-4 border-t border-[var(--border-color)] flex items-center justify-between gap-3">
+                            <div>
+                                <span class="text-[11px] text-[var(--text-muted)] block">Experience</span>
+                                <span class="text-sm font-black text-[var(--text-main)]">12+ Years</span>
+                            </div>
+                            <a href="bookings.html?doctor=dr-sophia-al-mansoor" class="btn btn-solid !py-2.5 !px-5 text-xs whitespace-nowrap">
+                                Book Doctor <i class="fas fa-arrow-right ml-1.5 text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor 4: Dr. Marcus Sterling -->
+                <div class="doctor-card" data-category="voice">
+                    <div class="doctor-img-box">
+                        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=800&q=80"
+                            alt="Dr. Marcus Sterling, Sc.D., CCC-SLP" />
+                        <div class="doctor-img-gradient"></div>
+                        
+                        <!-- Floating Badges -->
+                        <div class="absolute top-4 left-4 z-10">
+                            <span class="bg-purple-600/90 text-white backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider shadow">
+                                Voice & Dysphagia
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-slate-900/80 text-amber-300 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow border border-white/10">
+                                <i class="fas fa-star text-amber-400"></i> 4.9 (210+)
+                            </span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 z-10">
+                            <span class="text-white text-xs font-semibold flex items-center gap-2 drop-shadow">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                Accepting New Patients
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 md:p-8 flex flex-col flex-1">
+                        <!-- Name & Title -->
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-black text-[var(--text-main)] mb-1 flex items-center gap-2">
+                                Dr. Marcus Sterling
+                                <i class="fas fa-check-circle text-[var(--accent-color)] text-base" title="ASHA Fellow & Voice Specialist"></i>
+                            </h3>
+                            <p class="text-xs font-extrabold uppercase tracking-wider text-[var(--accent-color)]">
+                                Voice Restoration & Swallowing Lead
+                            </p>
+                        </div>
+
+                        <!-- Qualifications & Degrees Box -->
+                        <div class="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-2xl p-4 mb-5">
+                            <span class="text-[10px] font-extrabold uppercase tracking-widest text-[var(--text-muted)] block mb-2">
+                                <i class="fas fa-graduation-cap text-[var(--accent-color)] mr-1"></i> Qualifications & Degrees
+                            </span>
+                            <ul class="text-xs space-y-1.5 text-[var(--text-main)] font-medium">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-[var(--accent-color)] text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>Sc.D. in Vocal Acoustics</strong> &mdash; Johns Hopkins University</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-[var(--accent-color)] text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>Postdoctoral Clinical Fellowship</strong> &mdash; Mayo Clinic</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-award text-amber-500 text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>MBSImP Certified Swallowing Specialist</strong> (CCC-SLP)</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Clinical Expertise Badges -->
+                        <div class="mb-5">
+                            <span class="text-[10px] font-extrabold uppercase tracking-widest text-[var(--text-muted)] block mb-2">
+                                <i class="fas fa-stethoscope text-[var(--accent-color)] mr-1"></i> Clinical Expertise
+                            </span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Dysphagia (Swallowing)</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Vocal Fold Paralysis</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Professional Voice Care</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Laryngeal Videoendoscopy</span>
+                            </div>
+                        </div>
+
+                        <!-- Doctor Quote / Philosophy -->
+                        <p class="text-xs italic text-[var(--text-muted)] leading-relaxed mb-6 border-l-2 border-[var(--accent-color)] pl-3">
+                            &ldquo;Restoring safe swallowing and vocal projection transforms the human spirit and directly restores life quality.&rdquo;
+                        </p>
+
+                        <!-- Bottom Card Meta & Action -->
+                        <div class="mt-auto pt-4 border-t border-[var(--border-color)] flex items-center justify-between gap-3">
+                            <div>
+                                <span class="text-[11px] text-[var(--text-muted)] block">Experience</span>
+                                <span class="text-sm font-black text-[var(--text-main)]">18+ Years</span>
+                            </div>
+                            <a href="bookings.html?doctor=dr-marcus-sterling" class="btn btn-solid !py-2.5 !px-5 text-xs whitespace-nowrap">
+                                Book Doctor <i class="fas fa-arrow-right ml-1.5 text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor 5: Dr. Amara Okafor -->
+                <div class="doctor-card" data-category="aac">
+                    <div class="doctor-img-box">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                            alt="Dr. Amara Okafor, M.S., CCC-SLP, ATP" />
+                        <div class="doctor-img-gradient"></div>
+                        
+                        <!-- Floating Badges -->
+                        <div class="absolute top-4 left-4 z-10">
+                            <span class="bg-emerald-600/90 text-white backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider shadow">
+                                AAC & Autism
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-slate-900/80 text-amber-300 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow border border-white/10">
+                                <i class="fas fa-star text-amber-400"></i> 5.0 (130+)
+                            </span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 z-10">
+                            <span class="text-white text-xs font-semibold flex items-center gap-2 drop-shadow">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                Accepting New Patients
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 md:p-8 flex flex-col flex-1">
+                        <!-- Name & Title -->
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-black text-[var(--text-main)] mb-1 flex items-center gap-2">
+                                Dr. Amara Okafor
+                                <i class="fas fa-check-circle text-[var(--accent-color)] text-base" title="Assistive Technology Professional Certified"></i>
+                            </h3>
+                            <p class="text-xs font-extrabold uppercase tracking-wider text-[var(--accent-color)]">
+                                Autism Spectrum & AAC Technology Lead
+                            </p>
+                        </div>
+
+                        <!-- Qualifications & Degrees Box -->
+                        <div class="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-2xl p-4 mb-5">
+                            <span class="text-[10px] font-extrabold uppercase tracking-widest text-[var(--text-muted)] block mb-2">
+                                <i class="fas fa-graduation-cap text-[var(--accent-color)] mr-1"></i> Qualifications & Degrees
+                            </span>
+                            <ul class="text-xs space-y-1.5 text-[var(--text-main)] font-medium">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-[var(--accent-color)] text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>M.S. in Speech-Language Pathology</strong> &mdash; Vanderbilt University</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-award text-amber-500 text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>Assistive Technology Professional (ATP)</strong> Credential</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-[var(--accent-color)] text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>PROMPT Level 2 Trained</strong> & Gestalt Language Specialist</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Clinical Expertise Badges -->
+                        <div class="mb-5">
+                            <span class="text-[10px] font-extrabold uppercase tracking-widest text-[var(--text-muted)] block mb-2">
+                                <i class="fas fa-stethoscope text-[var(--accent-color)] mr-1"></i> Clinical Expertise
+                            </span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">High-Tech AAC Devices</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Autism Spectrum Disorder</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Gestalt Language (GLP)</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Eye-Gaze Systems</span>
+                            </div>
+                        </div>
+
+                        <!-- Doctor Quote / Philosophy -->
+                        <p class="text-xs italic text-[var(--text-muted)] leading-relaxed mb-6 border-l-2 border-[var(--accent-color)] pl-3">
+                            &ldquo;Communication is a fundamental right. Through words, devices, or body language, every voice must be given a channel.&rdquo;
+                        </p>
+
+                        <!-- Bottom Card Meta & Action -->
+                        <div class="mt-auto pt-4 border-t border-[var(--border-color)] flex items-center justify-between gap-3">
+                            <div>
+                                <span class="text-[11px] text-[var(--text-muted)] block">Experience</span>
+                                <span class="text-sm font-black text-[var(--text-main)]">11+ Years</span>
+                            </div>
+                            <a href="bookings.html?doctor=dr-amara-okafor" class="btn btn-solid !py-2.5 !px-5 text-xs whitespace-nowrap">
+                                Book Doctor <i class="fas fa-arrow-right ml-1.5 text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor 6: Dr. Arthur Pendelton -->
+                <div class="doctor-card" data-category="neurological">
+                    <div class="doctor-img-box">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80"
+                            alt="Dr. Arthur Pendelton, Ph.D., CCC-SLP" />
+                        <div class="doctor-img-gradient"></div>
+                        
+                        <!-- Floating Badges -->
+                        <div class="absolute top-4 left-4 z-10">
+                            <span class="bg-indigo-600/90 text-white backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider shadow">
+                                Cognitive & Rehab
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-slate-900/80 text-amber-300 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow border border-white/10">
+                                <i class="fas fa-star text-amber-400"></i> 4.9 (175+)
+                            </span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 z-10">
+                            <span class="text-white text-xs font-semibold flex items-center gap-2 drop-shadow">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                Accepting New Patients
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 md:p-8 flex flex-col flex-1">
+                        <!-- Name & Title -->
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-black text-[var(--text-main)] mb-1 flex items-center gap-2">
+                                Dr. Arthur Pendelton
+                                <i class="fas fa-check-circle text-[var(--accent-color)] text-base" title="Certified Dementia Practitioner"></i>
+                            </h3>
+                            <p class="text-xs font-extrabold uppercase tracking-wider text-[var(--accent-color)]">
+                                Cognitive-Communication Rehabilitation Lead
+                            </p>
+                        </div>
+
+                        <!-- Qualifications & Degrees Box -->
+                        <div class="bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-2xl p-4 mb-5">
+                            <span class="text-[10px] font-extrabold uppercase tracking-widest text-[var(--text-muted)] block mb-2">
+                                <i class="fas fa-graduation-cap text-[var(--accent-color)] mr-1"></i> Qualifications & Degrees
+                            </span>
+                            <ul class="text-xs space-y-1.5 text-[var(--text-main)] font-medium">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-[var(--accent-color)] text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>Ph.D. in Cognitive Neuropsychology</strong> &mdash; University of Oxford</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-check text-[var(--accent-color)] text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>M.S. in Speech Pathology</strong> &mdash; New York University (NYU)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-award text-amber-500 text-[10px] mt-1 shrink-0"></i>
+                                    <span><strong>Certified Dementia Practitioner (CDP)</strong> & CCC-SLP</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Clinical Expertise Badges -->
+                        <div class="mb-5">
+                            <span class="text-[10px] font-extrabold uppercase tracking-widest text-[var(--text-muted)] block mb-2">
+                                <i class="fas fa-stethoscope text-[var(--accent-color)] mr-1"></i> Clinical Expertise
+                            </span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Mild Cognitive Impairment</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Executive Functioning</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Memory Rehabilitation</span>
+                                <span class="badge-tag bg-[var(--menu-hover-bg)] text-[var(--accent-color)] border border-[var(--border-color)]">Caregiver Support Protocols</span>
+                            </div>
+                        </div>
+
+                        <!-- Doctor Quote / Philosophy -->
+                        <p class="text-xs italic text-[var(--text-muted)] leading-relaxed mb-6 border-l-2 border-[var(--accent-color)] pl-3">
+                            &ldquo;Preserving communicative dignity and cognitive agency empowers patients and keeps families warmly connected.&rdquo;
+                        </p>
+
+                        <!-- Bottom Card Meta & Action -->
+                        <div class="mt-auto pt-4 border-t border-[var(--border-color)] flex items-center justify-between gap-3">
+                            <div>
+                                <span class="text-[11px] text-[var(--text-muted)] block">Experience</span>
+                                <span class="text-sm font-black text-[var(--text-main)]">15+ Years</span>
+                            </div>
+                            <a href="bookings.html?doctor=dr-arthur-pendelton" class="btn btn-solid !py-2.5 !px-5 text-xs whitespace-nowrap">
+                                Book Doctor <i class="fas fa-arrow-right ml-1.5 text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= SECTION: WHY OUR SPECIALISTS STAND OUT ================= -->
+    <section class="py-24 bg-[var(--bg-secondary)] border-b border-[var(--border-color)]">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-[var(--accent-color)] font-extrabold uppercase text-xs tracking-widest mb-3 block">
+                    Our Clinical Standard
+                </span>
+                <h2 class="text-3xl md:text-5xl font-black text-[var(--text-main)] leading-tight mb-4">
+                    The TALKTHERA Difference
+                </h2>
+                <p class="text-[var(--text-muted)] text-base md:text-lg">
+                    Every member of our clinical faculty undergoes rigorous vetting, continuous education, and holds active national accreditation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-[var(--bg-card)] p-8 rounded-3xl border border-[var(--border-color)] shadow-sm hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-100 dark:bg-blue-900/30 text-[var(--accent-color)] flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[var(--text-main)] mb-3">ASHA CCC-SLP Certified</h3>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed">
+                        100% of our clinical team holds the prestigious Certificate of Clinical Competence in Speech-Language Pathology from the American Speech-Language-Hearing Association.
+                    </p>
+                </div>
+
+                <div class="bg-[var(--bg-card)] p-8 rounded-3xl border border-[var(--border-color)] shadow-sm hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-indigo-100 dark:bg-indigo-900/30 text-indigo-500 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[var(--text-main)] mb-3">Multidisciplinary Collaboration</h3>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed">
+                        Our specialists consult directly with ENTs, pediatricians, neurologists, and occupational therapists to craft holistic, patient-centered rehabilitation plans.
+                    </p>
+                </div>
+
+                <div class="bg-[var(--bg-card)] p-8 rounded-3xl border border-[var(--border-color)] shadow-sm hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-100 dark:bg-emerald-900/30 text-emerald-500 flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[var(--text-main)] mb-3">Continuous Evidence & Tech</h3>
+                    <p class="text-[var(--text-muted)] text-sm leading-relaxed">
+                        Our therapists utilize acoustic biofeedback, videostroboscopy, and cutting-edge eye-gaze AAC devices to accelerate tangible, measurable clinical outcomes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CTA BANNER ================= -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-[1000px] mx-auto px-6 text-center relative z-10">
+            <span class="bg-white/20 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full inline-block mb-6">
+                Consult With A Specialist
+            </span>
+            <h2 class="text-3xl md:text-5xl font-black mb-6 leading-tight">
+                Ready to Work With One of Our Doctors?
+            </h2>
+            <p class="text-blue-100 text-lg mb-10 max-w-2xl mx-auto font-light">
+                Schedule a comprehensive speech, language, or swallowing assessment today. We offer in-clinic and secure telehealth appointments.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="bookings.html" class="btn !bg-white !text-blue-600 hover:!bg-blue-50 !py-4 !px-8 text-sm font-bold shadow-xl">
+                    Schedule Your Session
+                </a>
+                <a href="contact.html" class="btn !bg-blue-800/40 !text-white hover:!bg-blue-800/60 border border-white/30 !py-4 !px-8 text-sm font-bold">
+                    Contact Clinical Office
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16">
+                <div class="lg:col-span-2">
+                    <a href="index.html" class="inline-flex items-center gap-2 text-2xl font-bold tracking-tight uppercase mb-6"
+                        style="color: var(--text-main) !important; text-decoration: none;">
+                        <i class="fas fa-comment-medical text-2xl" style="color: var(--accent-color);"></i>
+                        TALKTHERA
+                    </a>
+                    <p class="text-sm leading-relaxed mb-6 max-w-sm" style="color: var(--text-muted);">
+                        Transforming lives through compassionate, cutting-edge speech-language therapy. Helping children, adults, and seniors communicate with clarity and confidence.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="#" class="social-link-circle" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link-circle" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link-circle" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link-circle" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Our Doctors</a></li>
+                        <li><a href="pricing.html">Pricing Plans</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Therapy Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html">Pediatric Articulation</a></li>
+                        <li><a href="services.html">Aphasia & Stroke Rehab</a></li>
+                        <li><a href="services.html">Fluency & Stuttering</a></li>
+                        <li><a href="services.html">Voice Rehabilitation</a></li>
+                        <li><a href="services.html">Dysphagia Care</a></li>
+                        <li><a href="services.html">AAC Implementation</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Clinical Office</h4>
+                    <div class="space-y-4 text-sm" style="color: var(--text-muted);">
+                        <p class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-[var(--accent-color)] mt-1"></i>
+                            <span>742 Evergreen Terrace, Suite 400<br>Springfield, OR 97477</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="fas fa-phone text-[var(--accent-color)]"></i>
+                            <span>(555) 234-5678</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-[var(--accent-color)]"></i>
+                            <span>care@talkthera.com</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom flex flex-col md:flex-row justify-between items-center text-xs gap-6 font-semibold uppercase tracking-widest">
+                <p style="color: var(--text-muted);">&copy; 2026 TALKTHERA Services. All rights reserved.</p>
+                <div class="flex flex-wrap justify-center gap-6 sm:gap-8">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Patient Privacy Policy</a>
+                    <a href="#">HIPAA Compliance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+        // Navbar Scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu
+        const mobileBtn = document.getElementById('mobile-btn');
+        const fullscreenMenu = document.getElementById('fullscreen-menu');
+        const closeMenu = document.getElementById('close-menu');
+        const drawerOverlay = document.getElementById('drawer-overlay');
+
+        function toggleMenu() {
+            fullscreenMenu.classList.toggle('active');
+            drawerOverlay.classList.toggle('active');
+            document.body.style.overflow = fullscreenMenu.classList.contains('active') ? 'hidden' : 'auto';
+        }
+
+        mobileBtn.onclick = toggleMenu;
+        closeMenu.onclick = toggleMenu;
+        drawerOverlay.onclick = toggleMenu;
+
+        // Dark/Light Theme
+        const themeDesktop = document.getElementById('theme-toggle-desktop');
+        const themeMobile = document.getElementById('theme-toggle-mobile');
+        const iconDesktop = document.getElementById('theme-icon-desktop');
+        const iconMobile = document.getElementById('theme-icon-mobile');
+        const theme = localStorage.getItem('theme') || 'light';
+
+        function updateThemeUI(isDark) {
+            if (isDark) {
+                document.body.classList.add('dark-mode');
+                if (iconDesktop) iconDesktop.className = 'fas fa-sun';
+                if (iconMobile) iconMobile.className = 'fas fa-sun';
+            } else {
+                document.body.classList.remove('dark-mode');
+                if (iconDesktop) iconDesktop.className = 'fas fa-moon';
+                if (iconMobile) iconMobile.className = 'fas fa-moon';
+            }
+        }
+
+        updateThemeUI(theme === 'dark');
+
+        function toggleTheme() {
+            const isDark = !document.body.classList.contains('dark-mode');
+            updateThemeUI(isDark);
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+
+        themeDesktop.onclick = toggleTheme;
+        if (themeMobile) themeMobile.onclick = toggleTheme;
+
+        // RTL / LTR Toggle
+        const rtlBtn = document.getElementById('rtl-btn');
+        const rtlMobile = document.getElementById('rtl-toggle-mobile');
+        const dir = localStorage.getItem('dir') || 'ltr';
+
+        function updateRTLUI(currentDir) {
+            const isRTL = currentDir === 'rtl';
+            if (rtlBtn) rtlBtn.innerText = isRTL ? 'RTL' : 'LTR';
+            if (rtlMobile) rtlMobile.innerText = isRTL ? 'RTL' : 'LTR';
+        }
+
+        if (dir === 'rtl') { document.documentElement.dir = 'rtl'; }
+        updateRTLUI(dir);
+
+        function toggleRTL() {
+            const isRTL = document.documentElement.dir === 'rtl';
+            const newDir = isRTL ? 'ltr' : 'rtl';
+            document.documentElement.dir = newDir;
+            localStorage.setItem('dir', newDir);
+            updateRTLUI(newDir);
+        }
+
+        if (rtlBtn) rtlBtn.onclick = toggleRTL;
+        if (rtlMobile) rtlMobile.onclick = toggleRTL;
+
+        // Interactive Doctor Category Filter
+        const filterBtns = document.querySelectorAll('#doctor-filters .filter-btn');
+        const doctorCards = document.querySelectorAll('#doctors-grid .doctor-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                doctorCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'flex';
+                        card.style.animation = 'fadeIn 0.4s ease';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
