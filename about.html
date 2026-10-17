@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speech & Language Therapy Center - About Us</title>
     <script src="tailwind.js"></script>
+    <link rel="icon" type="image/jpeg" href="images\images (6).png">
+    <link rel="icon" type="image/png" href="images\images (6).png">
     <link rel="icon" type="image/png" href="images\images.jpg">
     <script>
         tailwind.config = {
@@ -90,8 +92,13 @@
         }
 
         @keyframes subtleZoom {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.05); }
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.05);
+            }
         }
 
         .animate-zoom {
@@ -457,7 +464,8 @@
     <nav class="navbar" id="main-nav">
         <div class="w-full flex items-center justify-between mx-auto">
             <div class="flex items-center flex-shrink-0">
-                <a href="index.html" class="inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight uppercase"
+                <a href="index.html"
+                    class="inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight uppercase"
                     style="color: var(--text-main) !important; text-decoration: none;">
                     <i class="fas fa-comment-medical" style="color: var(--accent-color); font-size: 1.4rem;"></i>
                     TALKTHERA
@@ -518,7 +526,7 @@
                 <i class="fas fa-times"></i>
             </button>
         </div>
-        
+
         <div class="flex flex-col w-full overflow-y-auto flex-1 py-4">
             <a href="index.html" class="mobile-link">Home Page 1</a>
             <a href="home-2.html" class="mobile-link">Home Page 2</a>
@@ -530,10 +538,12 @@
             <a href="doctors.html" class="mobile-link">Doctors</a>
             <a href="contact.html" class="mobile-link">Contact</a>
         </div>
-        <div class="w-full px-8 py-8 border-t border-[var(--border-color)] flex flex-col gap-6 shrink-0 bg-[var(--bg-secondary)]">
+        <div
+            class="w-full px-8 py-8 border-t border-[var(--border-color)] flex flex-col gap-6 shrink-0 bg-[var(--bg-secondary)]">
             <div class="flex justify-between items-center w-full">
                 <div class="flex items-center gap-3">
-                    <span class="text-[var(--text-muted)] font-medium text-[10px] uppercase tracking-widest">Theme</span>
+                    <span
+                        class="text-[var(--text-muted)] font-medium text-[10px] uppercase tracking-widest">Theme</span>
                     <button id="theme-toggle-mobile" class="icon-btn">
                         <i class="fas fa-moon" id="theme-icon-mobile"></i>
                     </button>
@@ -547,32 +557,41 @@
     </div>
 
     <!-- ================= HERO BANNER ================= -->
-    <section class="relative w-full min-h-[100dvh] flex items-center justify-center overflow-hidden border-b border-[var(--border-color)] bg-[var(--bg-color)]">
+    <section
+        class="relative w-full min-h-[100dvh] flex items-center justify-center overflow-hidden border-b border-[var(--border-color)] bg-[var(--bg-color)]">
 
         <div class="absolute inset-0 z-0">
             <img src="images\pexels-tima-miroshnichenko-5711030 (1).jpg" alt="About Speech Therapy"
                 class="w-full h-full object-cover animate-zoom" />
-            <div class="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-slate-900/70 to-slate-900/90 dark:from-slate-900/95 dark:via-slate-900/80 dark:to-black backdrop-blur-[2px]"></div>
+            <div
+                class="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-slate-900/70 to-slate-900/90 dark:from-slate-900/95 dark:via-slate-900/80 dark:to-black backdrop-blur-[2px]">
+            </div>
         </div>
 
-        <div class="max-w-[1000px] mx-auto px-6 w-full flex flex-col items-center justify-center text-center relative z-10 mt-12 py-16">
+        <div
+            class="max-w-[1000px] mx-auto px-6 w-full flex flex-col items-center justify-center text-center relative z-10 mt-12 py-16">
 
-            <span class="bg-blue-600/20 text-blue-200 border border-blue-500/30 text-xs font-bold uppercase tracking-[0.25em] mb-8 px-6 py-2 rounded-full shadow-lg flex items-center gap-2 backdrop-blur-md">
+            <span
+                class="bg-blue-600/20 text-blue-200 border border-blue-500/30 text-xs font-bold uppercase tracking-[0.25em] mb-8 px-6 py-2 rounded-full shadow-lg flex items-center gap-2 backdrop-blur-md">
                 <i class="fas fa-info-circle text-lg"></i> Our Story
             </span>
 
             <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6 text-white tracking-tight drop-shadow-xl">
                 About <br class="hidden sm:block">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">TALKTHERA</span>
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">TALKTHERA</span>
             </h1>
 
             <p class="text-slate-200 text-lg md:text-xl leading-relaxed max-w-2xl font-light mb-10 drop-shadow-md">
-                Dedicated to transforming lives through expert speech and language pathology. Learn about our mission, our values, and the passionate team behind your progress.
+                Dedicated to transforming lives through expert speech and language pathology. Learn about our mission,
+                our values, and the passionate team behind your progress.
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
                 <a href="contact.html" class="btn btn-solid !py-4 !px-10 text-sm !rounded-md">Get in Touch</a>
-                <a href="#our-mission" class="btn !bg-white/10 !text-white hover:!bg-white/20 border border-white/20 !py-4 !px-10 text-sm backdrop-blur-md !rounded-md shadow-md">Read Our Mission</a>
+                <a href="#our-mission"
+                    class="btn !bg-white/10 !text-white hover:!bg-white/20 border border-white/20 !py-4 !px-10 text-sm backdrop-blur-md !rounded-md shadow-md">Read
+                    Our Mission</a>
             </div>
         </div>
     </section>
@@ -589,25 +608,33 @@
                         Pioneering Better <br> Communication
                     </h2>
                     <p class="text-[var(--text-muted)] text-lg leading-relaxed mb-6">
-                        TALKTHERA was established with a singular focus: to provide accessible, high-quality speech and language therapy to individuals of all ages. We understand that communication is the cornerstone of human connection.
+                        TALKTHERA was established with a singular focus: to provide accessible, high-quality speech and
+                        language therapy to individuals of all ages. We understand that communication is the cornerstone
+                        of human connection.
                     </p>
                     <p class="text-[var(--text-muted)] text-lg leading-relaxed mb-8">
-                        Our state-of-the-art facility is equipped with modern diagnostic tools and designed to offer a comforting environment. We work closely with families, caregivers, and educators to ensure that the skills learned in therapy translate seamlessly into daily life.
+                        Our state-of-the-art facility is equipped with modern diagnostic tools and designed to offer a
+                        comforting environment. We work closely with families, caregivers, and educators to ensure that
+                        the skills learned in therapy translate seamlessly into daily life.
                     </p>
                     <div class="flex items-center gap-6">
                         <div class="flex flex-col">
                             <span class="text-3xl font-black text-[var(--text-main)]">15+</span>
-                            <span class="text-sm font-semibold text-[var(--text-muted)] uppercase tracking-wider">Years Active</span>
+                            <span class="text-sm font-semibold text-[var(--text-muted)] uppercase tracking-wider">Years
+                                Active</span>
                         </div>
                         <div class="w-px h-12 bg-[var(--border-color)]"></div>
                         <div class="flex flex-col">
                             <span class="text-3xl font-black text-[var(--text-main)]">5k+</span>
-                            <span class="text-sm font-semibold text-[var(--text-muted)] uppercase tracking-wider">Happy Patients</span>
+                            <span class="text-sm font-semibold text-[var(--text-muted)] uppercase tracking-wider">Happy
+                                Patients</span>
                         </div>
                     </div>
                 </div>
-                <div class="relative h-[600px] rounded-[40px] overflow-hidden shadow-2xl border border-[var(--border-color)]">
-                    <img src="images\pexels-pavel-danilyuk-8761555.jpg" alt="About Organization" class="w-full h-full object-cover" />
+                <div
+                    class="relative h-[600px] rounded-[40px] overflow-hidden shadow-2xl border border-[var(--border-color)]">
+                    <img src="images\pexels-pavel-danilyuk-8761555.jpg" alt="About Organization"
+                        class="w-full h-full object-cover" />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 </div>
             </div>
@@ -632,8 +659,10 @@
     <section id="our-mission" class="py-24 bg-[var(--bg-secondary)] border-b border-[var(--border-color)]">
         <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="relative h-[500px] rounded-[40px] overflow-hidden shadow-2xl border border-[var(--border-color)] order-2 lg:order-1">
-                    <img src="images\pexels-shkrabaanthony-7579174.jpg" alt="Our Mission" class="w-full h-full object-cover" />
+                <div
+                    class="relative h-[500px] rounded-[40px] overflow-hidden shadow-2xl border border-[var(--border-color)] order-2 lg:order-1">
+                    <img src="images\pexels-shkrabaanthony-7579174.jpg" alt="Our Mission"
+                        class="w-full h-full object-cover" />
                     <div class="absolute inset-0 bg-blue-900/20 mix-blend-multiply"></div>
                 </div>
                 <div class="flex flex-col justify-center order-1 lg:order-2">
@@ -644,21 +673,30 @@
                         Empowering Voices, <br> Transforming Lives
                     </h2>
                     <p class="text-[var(--text-muted)] text-lg leading-relaxed mb-6">
-                        Our mission is to provide evidence-based, highly individualized speech and language therapy services that empower our clients to achieve their maximum communicative potential.
+                        Our mission is to provide evidence-based, highly individualized speech and language therapy
+                        services that empower our clients to achieve their maximum communicative potential.
                     </p>
                     <ul class="space-y-6 mb-10 mt-4">
                         <li class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-[var(--bg-card)] text-[var(--accent-color)] flex items-center justify-center shrink-0 shadow-sm border border-[var(--border-color)]"><i class="fas fa-bullseye text-xl"></i></div>
+                            <div
+                                class="w-12 h-12 rounded-xl bg-[var(--bg-card)] text-[var(--accent-color)] flex items-center justify-center shrink-0 shadow-sm border border-[var(--border-color)]">
+                                <i class="fas fa-bullseye text-xl"></i>
+                            </div>
                             <div>
                                 <h4 class="text-xl font-bold text-[var(--text-main)] mb-1">Targeted Intervention</h4>
-                                <p class="text-[var(--text-muted)]">Delivering precise treatments that directly address core communicative deficits.</p>
+                                <p class="text-[var(--text-muted)]">Delivering precise treatments that directly address
+                                    core communicative deficits.</p>
                             </div>
                         </li>
                         <li class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-[var(--bg-card)] text-[var(--accent-color)] flex items-center justify-center shrink-0 shadow-sm border border-[var(--border-color)]"><i class="fas fa-users text-xl"></i></div>
+                            <div
+                                class="w-12 h-12 rounded-xl bg-[var(--bg-card)] text-[var(--accent-color)] flex items-center justify-center shrink-0 shadow-sm border border-[var(--border-color)]">
+                                <i class="fas fa-users text-xl"></i>
+                            </div>
                             <div>
                                 <h4 class="text-xl font-bold text-[var(--text-main)] mb-1">Family Integration</h4>
-                                <p class="text-[var(--text-muted)]">Equipping families with the tools necessary to support continuous progress at home.</p>
+                                <p class="text-[var(--text-muted)]">Equipping families with the tools necessary to
+                                    support continuous progress at home.</p>
                             </div>
                         </li>
                     </ul>
@@ -680,7 +718,8 @@
     <section class="py-24 bg-[var(--bg-color)] border-b border-[var(--border-color)]">
         <div class="max-w-[1440px] mx-auto px-6 lg:px-12 text-center">
             <div class="max-w-4xl mx-auto flex flex-col items-center">
-                <div class="w-20 h-20 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center mb-8 text-[var(--accent-color)] border border-[var(--border-color)] shadow-sm">
+                <div
+                    class="w-20 h-20 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center mb-8 text-[var(--accent-color)] border border-[var(--border-color)] shadow-sm">
                     <i class="fas fa-eye text-3xl"></i>
                 </div>
                 <span class="text-[var(--accent-color)] font-extrabold uppercase text-sm mb-4">
@@ -690,20 +729,25 @@
                     A World Where Everyone <br> Can Communicate Freely
                 </h2>
                 <p class="text-[var(--text-muted)] text-xl leading-relaxed mb-12">
-                    We envision a society free from communication barriers, where every individual—regardless of age or diagnosis—has the confidence, tools, and support they need to express their thoughts, feelings, and ideas without hesitation or restriction.
+                    We envision a society free from communication barriers, where every individual—regardless of age or
+                    diagnosis—has the confidence, tools, and support they need to express their thoughts, feelings, and
+                    ideas without hesitation or restriction.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
                     <div class="bg-[var(--bg-card)] p-8 rounded-3xl border border-[var(--border-color)] shadow-sm">
                         <h3 class="text-xl font-bold text-[var(--text-main)] mb-3">Innovation</h3>
-                        <p class="text-[var(--text-muted)] text-sm leading-relaxed">Continuously adopting the latest therapeutic technologies and methodologies.</p>
+                        <p class="text-[var(--text-muted)] text-sm leading-relaxed">Continuously adopting the latest
+                            therapeutic technologies and methodologies.</p>
                     </div>
                     <div class="bg-[var(--bg-card)] p-8 rounded-3xl border border-[var(--border-color)] shadow-sm">
                         <h3 class="text-xl font-bold text-[var(--text-main)] mb-3">Inclusivity</h3>
-                        <p class="text-[var(--text-muted)] text-sm leading-relaxed">Creating a welcoming, safe space for individuals of all backgrounds and abilities.</p>
+                        <p class="text-[var(--text-muted)] text-sm leading-relaxed">Creating a welcoming, safe space for
+                            individuals of all backgrounds and abilities.</p>
                     </div>
                     <div class="bg-[var(--bg-card)] p-8 rounded-3xl border border-[var(--border-color)] shadow-sm">
                         <h3 class="text-xl font-bold text-[var(--text-main)] mb-3">Excellence</h3>
-                        <p class="text-[var(--text-muted)] text-sm leading-relaxed">Maintaining the highest standard of care through continuous education and training.</p>
+                        <p class="text-[var(--text-muted)] text-sm leading-relaxed">Maintaining the highest standard of
+                            care through continuous education and training.</p>
                     </div>
                 </div>
             </div>
@@ -733,25 +777,34 @@
                 </h2>
             </div>
             <div class="flex flex-col gap-10">
-                <div class="bg-[var(--bg-card)] p-8 rounded-[32px] border border-[var(--border-color)] shadow-sm flex flex-col md:flex-row gap-8 items-center">
+                <div
+                    class="bg-[var(--bg-card)] p-8 rounded-[32px] border border-[var(--border-color)] shadow-sm flex flex-col md:flex-row gap-8 items-center">
                     <div class="text-4xl font-black text-[var(--accent-color)] min-w-[120px]">2010</div>
                     <div>
                         <h3 class="text-2xl font-bold text-[var(--text-main)] mb-2">The Foundation</h3>
-                        <p class="text-[var(--text-muted)] leading-relaxed">TALKTHERA was established in a small clinic with a dedicated team of just three speech-language pathologists, aiming to serve the local community's pediatric needs.</p>
+                        <p class="text-[var(--text-muted)] leading-relaxed">TALKTHERA was established in a small clinic
+                            with a dedicated team of just three speech-language pathologists, aiming to serve the local
+                            community's pediatric needs.</p>
                     </div>
                 </div>
-                <div class="bg-[var(--bg-card)] p-8 rounded-[32px] border border-[var(--border-color)] shadow-sm flex flex-col md:flex-row gap-8 items-center">
+                <div
+                    class="bg-[var(--bg-card)] p-8 rounded-[32px] border border-[var(--border-color)] shadow-sm flex flex-col md:flex-row gap-8 items-center">
                     <div class="text-4xl font-black text-[var(--accent-color)] min-w-[120px]">2016</div>
                     <div>
                         <h3 class="text-2xl font-bold text-[var(--text-main)] mb-2">Expanding Services</h3>
-                        <p class="text-[var(--text-muted)] leading-relaxed">Recognizing the growing demand, we expanded our services to include adult rehabilitation, post-stroke therapy, and specialized cognitive communication treatments.</p>
+                        <p class="text-[var(--text-muted)] leading-relaxed">Recognizing the growing demand, we expanded
+                            our services to include adult rehabilitation, post-stroke therapy, and specialized cognitive
+                            communication treatments.</p>
                     </div>
                 </div>
-                <div class="bg-[var(--bg-card)] p-8 rounded-[32px] border border-[var(--border-color)] shadow-sm flex flex-col md:flex-row gap-8 items-center">
+                <div
+                    class="bg-[var(--bg-card)] p-8 rounded-[32px] border border-[var(--border-color)] shadow-sm flex flex-col md:flex-row gap-8 items-center">
                     <div class="text-4xl font-black text-[var(--accent-color)] min-w-[120px]">2026</div>
                     <div>
                         <h3 class="text-2xl font-bold text-[var(--text-main)] mb-2">Modern Excellence</h3>
-                        <p class="text-[var(--text-muted)] leading-relaxed">Today, we operate a state-of-the-art diagnostic and therapy center, employing over 20 certified specialists and utilizing the latest in therapeutic technology and telehealth.</p>
+                        <p class="text-[var(--text-muted)] leading-relaxed">Today, we operate a state-of-the-art
+                            diagnostic and therapy center, employing over 20 certified specialists and utilizing the
+                            latest in therapeutic technology and telehealth.</p>
                     </div>
                 </div>
             </div>
@@ -781,19 +834,28 @@
                         A Patient-Centric <br> Methodology
                     </h2>
                     <p class="text-[var(--text-muted)] text-lg leading-relaxed mb-6">
-                        We recognize that no two individuals are exactly alike. Our comprehensive approach ensures that every aspect of therapy is tailored to fit the patient's specific lifestyle, challenges, and goals.
+                        We recognize that no two individuals are exactly alike. Our comprehensive approach ensures that
+                        every aspect of therapy is tailored to fit the patient's specific lifestyle, challenges, and
+                        goals.
                     </p>
                     <div class="bg-[var(--bg-secondary)] p-6 rounded-2xl border border-[var(--border-color)] mb-6">
-                        <h4 class="font-bold text-[var(--text-main)] mb-2 flex items-center gap-2"><i class="fas fa-clipboard-check text-[var(--accent-color)]"></i> Comprehensive Diagnostics</h4>
-                        <p class="text-sm text-[var(--text-muted)]">Utilizing standardized assessments and informal observations to gather a complete clinical picture.</p>
+                        <h4 class="font-bold text-[var(--text-main)] mb-2 flex items-center gap-2"><i
+                                class="fas fa-clipboard-check text-[var(--accent-color)]"></i> Comprehensive Diagnostics
+                        </h4>
+                        <p class="text-sm text-[var(--text-muted)]">Utilizing standardized assessments and informal
+                            observations to gather a complete clinical picture.</p>
                     </div>
                     <div class="bg-[var(--bg-secondary)] p-6 rounded-2xl border border-[var(--border-color)]">
-                        <h4 class="font-bold text-[var(--text-main)] mb-2 flex items-center gap-2"><i class="fas fa-hand-holding-heart text-[var(--accent-color)]"></i> Empathetic Care</h4>
-                        <p class="text-sm text-[var(--text-muted)]">Building strong rapport and trust to create a positive, stress-free therapeutic environment.</p>
+                        <h4 class="font-bold text-[var(--text-main)] mb-2 flex items-center gap-2"><i
+                                class="fas fa-hand-holding-heart text-[var(--accent-color)]"></i> Empathetic Care</h4>
+                        <p class="text-sm text-[var(--text-muted)]">Building strong rapport and trust to create a
+                            positive, stress-free therapeutic environment.</p>
                     </div>
                 </div>
-                <div class="relative h-[600px] rounded-[40px] overflow-hidden shadow-2xl border border-[var(--border-color)]">
-                    <img src="images\pexels-polina-zimmerman-3958437.jpg" alt="Our Approach" class="w-full h-full object-cover" />
+                <div
+                    class="relative h-[600px] rounded-[40px] overflow-hidden shadow-2xl border border-[var(--border-color)]">
+                    <img src="images\pexels-polina-zimmerman-3958437.jpg" alt="Our Approach"
+                        class="w-full h-full object-cover" />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 </div>
             </div>
@@ -817,14 +879,18 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-10 pt-4">
                 <div class="lg:col-span-4">
                     <div class="mb-6">
-                        <a href="index.html" class="inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight uppercase"
+                        <a href="index.html"
+                            class="inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight uppercase"
                             style="color: var(--text-main) !important; text-decoration: none;">
-                            <i class="fas fa-comment-medical" style="color: var(--accent-color); font-size: 1.4rem;"></i>
+                            <i class="fas fa-comment-medical"
+                                style="color: var(--accent-color); font-size: 1.4rem;"></i>
                             TALKTHERA
                         </a>
                     </div>
-                    <p class="opacity-80 leading-relaxed text-sm font-medium mb-8 max-w-sm" style="color: var(--text-muted);">
-                        Dedicated to helping individuals of all ages develop effective communication skills. Our licensed therapists provide personalized treatment plans for lasting results.
+                    <p class="opacity-80 leading-relaxed text-sm font-medium mb-8 max-w-sm"
+                        style="color: var(--text-muted);">
+                        Dedicated to helping individuals of all ages develop effective communication skills. Our
+                        licensed therapists provide personalized treatment plans for lasting results.
                     </p>
                     <div class="flex space-x-4">
                         <a href="#" class="social-link-circle"><i class="fab fa-instagram"></i></a>
@@ -833,7 +899,7 @@
                         <a href="#" class="social-link-circle"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="lg:col-span-8">
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
                         <div>
@@ -860,23 +926,27 @@
                             <h4>Main Center</h4>
                             <ul class="space-y-4 text-[var(--text-muted)] text-sm font-medium">
                                 <li class="flex items-start gap-4">
-                                    <i class="fas fa-map-marker-alt mt-1 shrink-0" style="color: var(--accent-color);"></i>
+                                    <i class="fas fa-map-marker-alt mt-1 shrink-0"
+                                        style="color: var(--accent-color);"></i>
                                     <span>450 Wellness Avenue<br>Therapy District, NY 10012</span>
                                 </li>
                                 <li class="flex items-center gap-4">
                                     <i class="fas fa-phone shrink-0" style="color: var(--accent-color);"></i>
-                                    <a href="tel:+15550198" class="break-all hover:text-[var(--accent-color)]">+1 (555) 800-TALK</a>
+                                    <a href="tel:+15550198" class="break-all hover:text-[var(--accent-color)]">+1 (555)
+                                        800-TALK</a>
                                 </li>
                                 <li class="flex items-center gap-4">
                                     <i class="fas fa-envelope shrink-0" style="color: var(--accent-color);"></i>
-                                    <a href="contact.html" class="break-all hover:text-[var(--accent-color)]">hello@talkthera.com</a>
+                                    <a href="contact.html"
+                                        class="break-all hover:text-[var(--accent-color)]">hello@talkthera.com</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom flex flex-col md:flex-row justify-between items-center text-xs gap-6 font-semibold uppercase tracking-widest">
+            <div
+                class="footer-bottom flex flex-col md:flex-row justify-between items-center text-xs gap-6 font-semibold uppercase tracking-widest">
                 <p style="color: var(--text-muted);">&copy; 2026 TALKTHERA Services. All rights reserved.</p>
                 <div class="flex flex-wrap justify-center gap-6 sm:gap-8">
                     <a href="#">Terms of Service</a>
@@ -967,4 +1037,5 @@
         if (rtlMobile) rtlMobile.onclick = toggleRTL;
     </script>
 </body>
+
 </html>

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speech & Language Therapy Center - FAQ</title>
     <script src="tailwind.js"></script>
+    <link rel="icon" type="image/jpeg" href="images\images (6).png">
+    <link rel="icon" type="image/png" href="images\images (6).png">
     <link rel="icon" type="image/png" href="images\images.jpg">
     <script>
         tailwind.config = {
@@ -90,8 +92,13 @@
         }
 
         @keyframes subtleZoom {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.05); }
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.05);
+            }
         }
 
         .animate-zoom {
@@ -448,7 +455,7 @@
             padding: 32px 0;
             margin-top: 60px;
         }
-        
+
         /* UNIQUE FAQ STYLING */
         .faq-item {
             background: var(--bg-card);
@@ -458,7 +465,7 @@
             overflow: hidden;
             transition: all 0.3s ease;
         }
-        
+
         .faq-item:hover {
             border-color: var(--accent-color);
             box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.1);
@@ -479,7 +486,7 @@
             font-size: 1.1rem;
             transition: color 0.3s ease;
         }
-        
+
         [dir="rtl"] .faq-question {
             text-align: right;
         }
@@ -501,7 +508,7 @@
             flex-shrink: 0;
             margin-left: 16px;
         }
-        
+
         [dir="rtl"] .faq-icon {
             margin-left: 0;
             margin-right: 16px;
@@ -538,7 +545,8 @@
     <nav class="navbar" id="main-nav">
         <div class="w-full flex items-center justify-between mx-auto">
             <div class="flex items-center flex-shrink-0">
-                <a href="index.html" class="inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight uppercase"
+                <a href="index.html"
+                    class="inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight uppercase"
                     style="color: var(--text-main) !important; text-decoration: none;">
                     <i class="fas fa-comment-medical" style="color: var(--accent-color); font-size: 1.4rem;"></i>
                     TALKTHERA
@@ -599,7 +607,7 @@
                 <i class="fas fa-times"></i>
             </button>
         </div>
-        
+
         <div class="flex flex-col w-full overflow-y-auto flex-1 py-4">
             <a href="index.html" class="mobile-link">Home Page 1</a>
             <a href="home-2.html" class="mobile-link">Home Page 2</a>
@@ -611,10 +619,12 @@
             <a href="doctors.html" class="mobile-link">Doctors</a>
             <a href="contact.html" class="mobile-link">Contact</a>
         </div>
-        <div class="w-full px-8 py-8 border-t border-[var(--border-color)] flex flex-col gap-6 shrink-0 bg-[var(--bg-secondary)]">
+        <div
+            class="w-full px-8 py-8 border-t border-[var(--border-color)] flex flex-col gap-6 shrink-0 bg-[var(--bg-secondary)]">
             <div class="flex justify-between items-center w-full">
                 <div class="flex items-center gap-3">
-                    <span class="text-[var(--text-muted)] font-medium text-[10px] uppercase tracking-widest">Theme</span>
+                    <span
+                        class="text-[var(--text-muted)] font-medium text-[10px] uppercase tracking-widest">Theme</span>
                     <button id="theme-toggle-mobile" class="icon-btn">
                         <i class="fas fa-moon" id="theme-icon-mobile"></i>
                     </button>
@@ -628,17 +638,22 @@
     </div>
 
     <!-- ================= HERO BANNER ================= -->
-    <section class="relative w-full h-[100dvh] flex items-center justify-center overflow-hidden border-b border-[var(--border-color)] bg-[var(--bg-color)] py-32 lg:py-0">
+    <section
+        class="relative w-full h-[100dvh] flex items-center justify-center overflow-hidden border-b border-[var(--border-color)] bg-[var(--bg-color)] py-32 lg:py-0">
 
         <div class="absolute inset-0 z-0">
             <img src="images\pexels-tkirkgoz-11543266.jpg" alt="Frequently Asked Questions"
                 class="w-full h-full object-cover animate-zoom" />
-            <div class="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-slate-900/70 to-slate-900/90 dark:from-slate-900/95 dark:via-slate-900/80 dark:to-black backdrop-blur-[2px]"></div>
+            <div
+                class="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-slate-900/70 to-slate-900/90 dark:from-slate-900/95 dark:via-slate-900/80 dark:to-black backdrop-blur-[2px]">
+            </div>
         </div>
 
-        <div class="max-w-[1000px] mx-auto px-6 w-full flex flex-col items-center justify-center text-center relative z-10 mt-12 py-16">
+        <div
+            class="max-w-[1000px] mx-auto px-6 w-full flex flex-col items-center justify-center text-center relative z-10 mt-12 py-16">
 
-            <span class="bg-blue-600/20 text-blue-200 border border-blue-500/30 text-xs font-bold uppercase tracking-[0.25em] mb-8 px-6 py-2 rounded-full shadow-lg flex items-center gap-2 backdrop-blur-md">
+            <span
+                class="bg-blue-600/20 text-blue-200 border border-blue-500/30 text-xs font-bold uppercase tracking-[0.25em] mb-8 px-6 py-2 rounded-full shadow-lg flex items-center gap-2 backdrop-blur-md">
                 <i class="fas fa-question-circle text-lg"></i> Support & Guidance
             </span>
 
@@ -648,12 +663,15 @@
             </h1>
 
             <p class="text-slate-200 text-lg md:text-xl leading-relaxed max-w-2xl font-light mb-10 drop-shadow-md">
-                Find clear, straightforward answers to the most common questions about our therapy processes, billing, and clinical approaches.
+                Find clear, straightforward answers to the most common questions about our therapy processes, billing,
+                and clinical approaches.
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
                 <a href="#general-faq" class="btn btn-solid !py-4 !px-10 text-sm !rounded-md">Browse FAQs</a>
-                <a href="contact.html" class="btn !bg-white/10 !text-white hover:!bg-white/20 border border-white/20 !py-4 !px-10 text-sm backdrop-blur-md !rounded-md shadow-md">Ask a Question</a>
+                <a href="contact.html"
+                    class="btn !bg-white/10 !text-white hover:!bg-white/20 border border-white/20 !py-4 !px-10 text-sm backdrop-blur-md !rounded-md shadow-md">Ask
+                    a Question</a>
             </div>
         </div>
     </section>
@@ -674,14 +692,17 @@
             </div>
 
             <div class="flex flex-col">
-                
+
                 <div class="faq-item">
                     <button class="faq-question">
                         <span>1. Do I need a doctor's referral to start therapy?</span>
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>While you do not always need a doctor's referral to receive an initial evaluation or start private-pay therapy, most insurance companies require a referral from your primary care physician or a specialist (like an ENT or Neurologist) in order to cover the costs. We recommend checking with your specific insurance provider.</p>
+                        <p>While you do not always need a doctor's referral to receive an initial evaluation or start
+                            private-pay therapy, most insurance companies require a referral from your primary care
+                            physician or a specialist (like an ENT or Neurologist) in order to cover the costs. We
+                            recommend checking with your specific insurance provider.</p>
                     </div>
                 </div>
 
@@ -691,7 +712,10 @@
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>The initial evaluation typically lasts between 60 to 90 minutes. For children, it involves play-based interactions and standardized tests. For adults, it includes conversational tasks and specific diagnostic tests. We will review medical history, assess current skills, discuss your goals, and formulate a customized treatment plan.</p>
+                        <p>The initial evaluation typically lasts between 60 to 90 minutes. For children, it involves
+                            play-based interactions and standardized tests. For adults, it includes conversational tasks
+                            and specific diagnostic tests. We will review medical history, assess current skills,
+                            discuss your goals, and formulate a customized treatment plan.</p>
                     </div>
                 </div>
 
@@ -701,7 +725,10 @@
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>A standard therapy session usually lasts for 45 minutes. This includes 35-40 minutes of direct therapeutic intervention and 5-10 minutes for consulting with parents/caregivers, reviewing progress, and providing home exercise materials. We also offer 30-minute and 60-minute sessions depending on the patient's stamina and specific needs.</p>
+                        <p>A standard therapy session usually lasts for 45 minutes. This includes 35-40 minutes of
+                            direct therapeutic intervention and 5-10 minutes for consulting with parents/caregivers,
+                            reviewing progress, and providing home exercise materials. We also offer 30-minute and
+                            60-minute sessions depending on the patient's stamina and specific needs.</p>
                     </div>
                 </div>
 
@@ -711,7 +738,10 @@
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>Frequency varies greatly depending on the severity of the diagnosis and the specific goals outlined in the care plan. Most of our clients attend therapy once or twice a week. Your speech-language pathologist will recommend the optimal frequency after the initial evaluation.</p>
+                        <p>Frequency varies greatly depending on the severity of the diagnosis and the specific goals
+                            outlined in the care plan. Most of our clients attend therapy once or twice a week. Your
+                            speech-language pathologist will recommend the optimal frequency after the initial
+                            evaluation.</p>
                     </div>
                 </div>
 
@@ -721,7 +751,10 @@
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, absolutely! We strongly encourage parent involvement, especially for early intervention and pediatric language delays. Parents observing and participating in sessions is one of the most effective ways to ensure that therapeutic strategies are carried over into the home environment.</p>
+                        <p>Yes, absolutely! We strongly encourage parent involvement, especially for early intervention
+                            and pediatric language delays. Parents observing and participating in sessions is one of the
+                            most effective ways to ensure that therapeutic strategies are carried over into the home
+                            environment.</p>
                     </div>
                 </div>
 
@@ -731,7 +764,10 @@
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, we offer secure, HIPAA-compliant telehealth services for clients who prefer to receive therapy from home. Telepractice is highly effective for many conditions, including adult aphasia, voice therapy, and articulation therapy for older children and adults. However, it may not be suitable for very young children with severe attention deficits.</p>
+                        <p>Yes, we offer secure, HIPAA-compliant telehealth services for clients who prefer to receive
+                            therapy from home. Telepractice is highly effective for many conditions, including adult
+                            aphasia, voice therapy, and articulation therapy for older children and adults. However, it
+                            may not be suitable for very young children with severe attention deficits.</p>
                     </div>
                 </div>
 
@@ -755,14 +791,17 @@
             </div>
 
             <div class="flex flex-col">
-                
+
                 <div class="faq-item">
                     <button class="faq-question">
                         <span>1. Do you accept my health insurance?</span>
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>We are in-network with many major insurance providers, including Medicare, Blue Cross Blue Shield, and Aetna. Because coverage for speech therapy can vary wildly between specific plans, we recommend calling our office with your insurance information so our billing team can verify your benefits prior to your first visit.</p>
+                        <p>We are in-network with many major insurance providers, including Medicare, Blue Cross Blue
+                            Shield, and Aetna. Because coverage for speech therapy can vary wildly between specific
+                            plans, we recommend calling our office with your insurance information so our billing team
+                            can verify your benefits prior to your first visit.</p>
                     </div>
                 </div>
 
@@ -772,7 +811,9 @@
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>We accept all major credit cards (Visa, MasterCard, American Express, Discover), debit cards, HSA/FSA cards, and personal checks. For private pay clients or those covering deductibles, payment is expected at the time of service.</p>
+                        <p>We accept all major credit cards (Visa, MasterCard, American Express, Discover), debit cards,
+                            HSA/FSA cards, and personal checks. For private pay clients or those covering deductibles,
+                            payment is expected at the time of service.</p>
                     </div>
                 </div>
 
@@ -782,7 +823,9 @@
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>We require a 24-hour notice for cancellations to avoid a cancellation fee. Consistent attendance is crucial for therapeutic progress. Frequent cancellations or no-shows may result in the loss of your recurring appointment slot.</p>
+                        <p>We require a 24-hour notice for cancellations to avoid a cancellation fee. Consistent
+                            attendance is crucial for therapeutic progress. Frequent cancellations or no-shows may
+                            result in the loss of your recurring appointment slot.</p>
                     </div>
                 </div>
 
@@ -792,7 +835,10 @@
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>Progress varies significantly depending on the individual, their diagnosis, consistency of attendance, and the amount of home practice completed. Some clients see notable changes within a few weeks, while chronic or severe conditions may require months or years of sustained intervention. We continuously monitor and report on progress.</p>
+                        <p>Progress varies significantly depending on the individual, their diagnosis, consistency of
+                            attendance, and the amount of home practice completed. Some clients see notable changes
+                            within a few weeks, while chronic or severe conditions may require months or years of
+                            sustained intervention. We continuously monitor and report on progress.</p>
                     </div>
                 </div>
 
@@ -802,7 +848,10 @@
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes. Our clinicians are specially trained in the evaluation and treatment of dysphagia (swallowing disorders) in both pediatric and adult populations. This includes clinical bedside swallowing evaluations, diet modification recommendations, and oral-motor strengthening exercises.</p>
+                        <p>Yes. Our clinicians are specially trained in the evaluation and treatment of dysphagia
+                            (swallowing disorders) in both pediatric and adult populations. This includes clinical
+                            bedside swallowing evaluations, diet modification recommendations, and oral-motor
+                            strengthening exercises.</p>
                     </div>
                 </div>
 
@@ -812,7 +861,10 @@
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>Absolutely. We believe a collaborative approach yields the best results. With your signed consent, we are happy to communicate and coordinate care with your child's teachers, school-based speech therapists, occupational therapists, physical therapists, or primary care physicians.</p>
+                        <p>Absolutely. We believe a collaborative approach yields the best results. With your signed
+                            consent, we are happy to communicate and coordinate care with your child's teachers,
+                            school-based speech therapists, occupational therapists, physical therapists, or primary
+                            care physicians.</p>
                     </div>
                 </div>
 
@@ -821,9 +873,11 @@
     </section>
 
     <!-- ================= SECTION 6: CTA ================= -->
-    <section class="relative w-full min-h-[60vh] py-20 flex items-center justify-center overflow-hidden border-b border-[var(--border-color)]">
+    <section
+        class="relative w-full min-h-[60vh] py-20 flex items-center justify-center overflow-hidden border-b border-[var(--border-color)]">
         <div class="absolute inset-0 z-0">
-            <img src="images\pexels-silverkblack-23496456.jpg" alt="Therapy Background" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=1920&q=80" alt="TalkThera Speech Therapy Consultation"
+                class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-[#0F172A]/90 backdrop-blur-sm"></div>
         </div>
         <div class="max-w-[1440px] mx-auto px-6 lg:px-12 w-full relative z-10 flex flex-col items-center text-center">
@@ -835,27 +889,36 @@
                     Ready to Improve Your Communication?
                 </h2>
                 <p class="text-slate-300 text-lg md:text-xl leading-relaxed mb-12">
-                    Schedule an initial consultation with one of our specialists. Take the first step towards finding your voice and achieving your communication goals.
+                    Schedule an initial consultation with one of our specialists. Take the first step towards finding
+                    your voice and achieving your communication goals.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-6 w-full mb-16">
-                    <a href="contact.html" class="btn btn-solid !py-5 !px-12 text-sm shadow-xl border border-transparent">
+                    <a href="contact.html"
+                        class="btn btn-solid !py-5 !px-12 text-sm shadow-xl border border-transparent">
                         Book an Appointment
                     </a>
-                    <a href="services.html" class="btn btn-outline !bg-transparent !text-white !border-white hover:!bg-white hover:!text-slate-900 !py-5 !px-12 text-sm shadow-xl">
+                    <a href="services.html"
+                        class="btn btn-outline !bg-transparent !text-white !border-white hover:!bg-white hover:!text-slate-900 !py-5 !px-12 text-sm shadow-xl">
                         View All Programs
                     </a>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10 border-t border-slate-700">
                     <div class="flex items-center justify-center gap-3">
-                        <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-600 flex items-center justify-center text-[var(--accent-color)]"><i class="fas fa-calendar-check"></i></div>
+                        <div
+                            class="w-12 h-12 rounded-full bg-slate-800 border border-slate-600 flex items-center justify-center text-[var(--accent-color)]">
+                            <i class="fas fa-calendar-check"></i></div>
                         <span class="text-white font-semibold">Easy Scheduling</span>
                     </div>
                     <div class="flex items-center justify-center gap-3">
-                        <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-600 flex items-center justify-center text-[var(--accent-color)]"><i class="fas fa-shield-alt"></i></div>
+                        <div
+                            class="w-12 h-12 rounded-full bg-slate-800 border border-slate-600 flex items-center justify-center text-[var(--accent-color)]">
+                            <i class="fas fa-shield-alt"></i></div>
                         <span class="text-white font-semibold">Confidential Care</span>
                     </div>
                     <div class="flex items-center justify-center gap-3">
-                        <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-600 flex items-center justify-center text-[var(--accent-color)]"><i class="fas fa-laptop-medical"></i></div>
+                        <div
+                            class="w-12 h-12 rounded-full bg-slate-800 border border-slate-600 flex items-center justify-center text-[var(--accent-color)]">
+                            <i class="fas fa-laptop-medical"></i></div>
                         <span class="text-white font-semibold">Telehealth Options</span>
                     </div>
                 </div>
@@ -878,14 +941,18 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-10 pt-4">
                 <div class="lg:col-span-4">
                     <div class="mb-6">
-                        <a href="index.html" class="inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight uppercase"
+                        <a href="index.html"
+                            class="inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight uppercase"
                             style="color: var(--text-main) !important; text-decoration: none;">
-                            <i class="fas fa-comment-medical" style="color: var(--accent-color); font-size: 1.4rem;"></i>
+                            <i class="fas fa-comment-medical"
+                                style="color: var(--accent-color); font-size: 1.4rem;"></i>
                             TALKTHERA
                         </a>
                     </div>
-                    <p class="opacity-80 leading-relaxed text-sm font-medium mb-8 max-w-sm" style="color: var(--text-muted);">
-                        Dedicated to helping individuals of all ages develop effective communication skills. Our licensed therapists provide personalized treatment plans for lasting results.
+                    <p class="opacity-80 leading-relaxed text-sm font-medium mb-8 max-w-sm"
+                        style="color: var(--text-muted);">
+                        Dedicated to helping individuals of all ages develop effective communication skills. Our
+                        licensed therapists provide personalized treatment plans for lasting results.
                     </p>
                     <div class="flex space-x-4">
                         <a href="#" class="social-link-circle"><i class="fab fa-instagram"></i></a>
@@ -894,7 +961,7 @@
                         <a href="#" class="social-link-circle"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="lg:col-span-8">
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
                         <div>
@@ -921,23 +988,27 @@
                             <h4>Main Center</h4>
                             <ul class="space-y-4 text-[var(--text-muted)] text-sm font-medium">
                                 <li class="flex items-start gap-4">
-                                    <i class="fas fa-map-marker-alt mt-1 shrink-0" style="color: var(--accent-color);"></i>
+                                    <i class="fas fa-map-marker-alt mt-1 shrink-0"
+                                        style="color: var(--accent-color);"></i>
                                     <span>450 Wellness Avenue<br>Therapy District, NY 10012</span>
                                 </li>
                                 <li class="flex items-center gap-4">
                                     <i class="fas fa-phone shrink-0" style="color: var(--accent-color);"></i>
-                                    <a href="tel:+15550198" class="break-all hover:text-[var(--accent-color)]">+1 (555) 800-TALK</a>
+                                    <a href="tel:+15550198" class="break-all hover:text-[var(--accent-color)]">+1 (555)
+                                        800-TALK</a>
                                 </li>
                                 <li class="flex items-center gap-4">
                                     <i class="fas fa-envelope shrink-0" style="color: var(--accent-color);"></i>
-                                    <a href="contact.html" class="break-all hover:text-[var(--accent-color)]">hello@talkthera.com</a>
+                                    <a href="contact.html"
+                                        class="break-all hover:text-[var(--accent-color)]">hello@talkthera.com</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom flex flex-col md:flex-row justify-between items-center text-xs gap-6 font-semibold uppercase tracking-widest">
+            <div
+                class="footer-bottom flex flex-col md:flex-row justify-between items-center text-xs gap-6 font-semibold uppercase tracking-widest">
                 <p style="color: var(--text-muted);">&copy; 2026 TALKTHERA Services. All rights reserved.</p>
                 <div class="flex flex-wrap justify-center gap-6 sm:gap-8">
                     <a href="#">Terms of Service</a>
@@ -1026,13 +1097,13 @@
 
         if (rtlBtn) rtlBtn.onclick = toggleRTL;
         if (rtlMobile) rtlMobile.onclick = toggleRTL;
-        
+
         /* FAQ ACCORDION SCRIPT */
         const faqItems = document.querySelectorAll('.faq-item');
-        
+
         faqItems.forEach(item => {
             const questionBtn = item.querySelector('.faq-question');
-            
+
             questionBtn.addEventListener('click', () => {
                 // Close other open items (optional, remove if you want multiple open at once)
                 faqItems.forEach(otherItem => {
@@ -1040,11 +1111,12 @@
                         otherItem.classList.remove('active');
                     }
                 });
-                
+
                 // Toggle current item
                 item.classList.toggle('active');
             });
         });
     </script>
 </body>
+
 </html>

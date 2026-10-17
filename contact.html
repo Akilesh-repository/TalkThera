@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speech & Language Therapy Center - Contact Us</title>
     <script src="tailwind.js"></script>
+    <link rel="icon" type="image/jpeg" href="images\images (6).png">
+    <link rel="icon" type="image/png" href="images\images (6).png">
     <link rel="icon" type="image/png" href="images\images.jpg">
     <script>
         tailwind.config = {
@@ -90,8 +92,13 @@
         }
 
         @keyframes subtleZoom {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.05); }
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.05);
+            }
         }
 
         .animate-zoom {
@@ -461,17 +468,17 @@
             font-size: 0.95rem;
             transition: all 0.3s ease;
         }
-        
+
         .form-control:focus {
             outline: none;
             border-color: var(--accent-color);
             box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
         }
-        
+
         body.dark-mode .form-control:focus {
             box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.1);
         }
-        
+
         .form-label {
             display: block;
             margin-bottom: 8px;
@@ -490,6 +497,7 @@
             border-radius: 24px;
             filter: grayscale(20%) contrast(110%);
         }
+
         body.dark-mode .map-container iframe {
             filter: grayscale(80%) invert(90%) contrast(120%);
         }
@@ -502,7 +510,8 @@
     <nav class="navbar" id="main-nav">
         <div class="w-full flex items-center justify-between mx-auto">
             <div class="flex items-center flex-shrink-0">
-                <a href="index.html" class="inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight uppercase"
+                <a href="index.html"
+                    class="inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight uppercase"
                     style="color: var(--text-main) !important; text-decoration: none;">
                     <i class="fas fa-comment-medical" style="color: var(--accent-color); font-size: 1.4rem;"></i>
                     TALKTHERA
@@ -563,7 +572,7 @@
                 <i class="fas fa-times"></i>
             </button>
         </div>
-        
+
         <div class="flex flex-col w-full overflow-y-auto flex-1 py-4">
             <a href="index.html" class="mobile-link">Home Page 1</a>
             <a href="home-2.html" class="mobile-link">Home Page 2</a>
@@ -575,10 +584,12 @@
             <a href="doctors.html" class="mobile-link">Doctors</a>
             <a href="contact.html" class="mobile-link" style="color: var(--accent-color);">Contact</a>
         </div>
-        <div class="w-full px-8 py-8 border-t border-[var(--border-color)] flex flex-col gap-6 shrink-0 bg-[var(--bg-secondary)]">
+        <div
+            class="w-full px-8 py-8 border-t border-[var(--border-color)] flex flex-col gap-6 shrink-0 bg-[var(--bg-secondary)]">
             <div class="flex justify-between items-center w-full">
                 <div class="flex items-center gap-3">
-                    <span class="text-[var(--text-muted)] font-medium text-[10px] uppercase tracking-widest">Theme</span>
+                    <span
+                        class="text-[var(--text-muted)] font-medium text-[10px] uppercase tracking-widest">Theme</span>
                     <button id="theme-toggle-mobile" class="icon-btn">
                         <i class="fas fa-moon" id="theme-icon-mobile"></i>
                     </button>
@@ -592,17 +603,22 @@
     </div>
 
     <!-- ================= HERO BANNER ================= -->
-    <section class="relative w-full h-[100dvh] flex items-center justify-center overflow-hidden border-b border-[var(--border-color)] bg-[var(--bg-color)]">
+    <section
+        class="relative w-full h-[100dvh] flex items-center justify-center overflow-hidden border-b border-[var(--border-color)] bg-[var(--bg-color)]">
 
         <div class="absolute inset-0 z-0">
             <img src="images\pexels-shvets-production-7176320.jpg" alt="Contact Us"
                 class="w-full h-full object-cover animate-zoom" />
-            <div class="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-slate-900/70 to-slate-900/90 dark:from-slate-900/95 dark:via-slate-900/80 dark:to-black backdrop-blur-[2px]"></div>
+            <div
+                class="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-slate-900/70 to-slate-900/90 dark:from-slate-900/95 dark:via-slate-900/80 dark:to-black backdrop-blur-[2px]">
+            </div>
         </div>
 
-        <div class="max-w-[1000px] mx-auto px-6 w-full flex flex-col items-center justify-center text-center relative z-10">
+        <div
+            class="max-w-[1000px] mx-auto px-6 w-full flex flex-col items-center justify-center text-center relative z-10">
 
-            <span class="bg-blue-600/20 text-blue-200 border border-blue-500/30 text-xs font-bold uppercase tracking-[0.25em] mb-8 px-6 py-2 rounded-full shadow-lg flex items-center gap-2 backdrop-blur-md">
+            <span
+                class="bg-blue-600/20 text-blue-200 border border-blue-500/30 text-xs font-bold uppercase tracking-[0.25em] mb-8 px-6 py-2 rounded-full shadow-lg flex items-center gap-2 backdrop-blur-md">
                 <i class="fas fa-envelope text-lg"></i> Reach Out
             </span>
 
@@ -612,12 +628,15 @@
             </h1>
 
             <p class="text-slate-200 text-lg md:text-xl leading-relaxed max-w-2xl font-light mb-10 drop-shadow-md">
-                Have questions about our therapy programs, insurance, or scheduling? Our team is here to provide the support and information you need.
+                Have questions about our therapy programs, insurance, or scheduling? Our team is here to provide the
+                support and information you need.
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
                 <a href="#contact-form" class="btn btn-solid !py-4 !px-10 text-sm !rounded-md">Send a Message</a>
-                <a href="bookings.html" class="btn !bg-white/10 !text-white hover:!bg-white/20 border border-white/20 !py-4 !px-10 text-sm backdrop-blur-md !rounded-md shadow-md">Book Appointment</a>
+                <a href="bookings.html"
+                    class="btn !bg-white/10 !text-white hover:!bg-white/20 border border-white/20 !py-4 !px-10 text-sm backdrop-blur-md !rounded-md shadow-md">Book
+                    Appointment</a>
             </div>
         </div>
     </section>
@@ -636,35 +655,46 @@
                     Choose the most convenient way to reach our dedicated support and administrative team.
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Card 1: Phone -->
-                <div class="bg-[var(--bg-card)] p-10 rounded-[32px] text-center border border-[var(--border-color)] shadow-sm hover:-translate-y-2 transition-transform">
-                    <div class="w-16 h-16 bg-[var(--bg-secondary)] rounded-full flex items-center justify-center mx-auto mb-6 text-[var(--accent-color)] shadow-sm">
+                <div
+                    class="bg-[var(--bg-card)] p-10 rounded-[32px] text-center border border-[var(--border-color)] shadow-sm hover:-translate-y-2 transition-transform">
+                    <div
+                        class="w-16 h-16 bg-[var(--bg-secondary)] rounded-full flex items-center justify-center mx-auto mb-6 text-[var(--accent-color)] shadow-sm">
                         <i class="fas fa-phone text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-[var(--text-main)] mb-3">Call Us Directly</h3>
-                    <p class="text-[var(--text-muted)] text-sm mb-4">Need immediate assistance? Our reception is open Mon-Fri, 8AM to 6PM.</p>
-                    <a href="tel:+15558008255" class="text-lg font-black text-[var(--accent-color)] hover:underline">+1 (555) 800-TALK</a>
+                    <p class="text-[var(--text-muted)] text-sm mb-4">Need immediate assistance? Our reception is open
+                        Mon-Fri, 8AM to 6PM.</p>
+                    <a href="tel:+15558008255" class="text-lg font-black text-[var(--accent-color)] hover:underline">+1
+                        (555) 800-TALK</a>
                 </div>
-                
+
                 <!-- Card 2: Email -->
-                <div class="bg-[var(--bg-card)] p-10 rounded-[32px] text-center border border-[var(--border-color)] shadow-sm hover:-translate-y-2 transition-transform">
-                    <div class="w-16 h-16 bg-[var(--bg-secondary)] rounded-full flex items-center justify-center mx-auto mb-6 text-[var(--accent-color)] shadow-sm">
+                <div
+                    class="bg-[var(--bg-card)] p-10 rounded-[32px] text-center border border-[var(--border-color)] shadow-sm hover:-translate-y-2 transition-transform">
+                    <div
+                        class="w-16 h-16 bg-[var(--bg-secondary)] rounded-full flex items-center justify-center mx-auto mb-6 text-[var(--accent-color)] shadow-sm">
                         <i class="fas fa-envelope-open-text text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-[var(--text-main)] mb-3">Email Support</h3>
-                    <p class="text-[var(--text-muted)] text-sm mb-4">For general inquiries, referral forms, or insurance verification questions.</p>
-                    <a href="mailto:hello@talkthera.com" class="text-lg font-black text-[var(--accent-color)] hover:underline">hello@talkthera.com</a>
+                    <p class="text-[var(--text-muted)] text-sm mb-4">For general inquiries, referral forms, or insurance
+                        verification questions.</p>
+                    <a href="mailto:hello@talkthera.com"
+                        class="text-lg font-black text-[var(--accent-color)] hover:underline">hello@talkthera.com</a>
                 </div>
 
                 <!-- Card 3: Location -->
-                <div class="bg-[var(--bg-card)] p-10 rounded-[32px] text-center border border-[var(--border-color)] shadow-sm hover:-translate-y-2 transition-transform">
-                    <div class="w-16 h-16 bg-[var(--bg-secondary)] rounded-full flex items-center justify-center mx-auto mb-6 text-[var(--accent-color)] shadow-sm">
+                <div
+                    class="bg-[var(--bg-card)] p-10 rounded-[32px] text-center border border-[var(--border-color)] shadow-sm hover:-translate-y-2 transition-transform">
+                    <div
+                        class="w-16 h-16 bg-[var(--bg-secondary)] rounded-full flex items-center justify-center mx-auto mb-6 text-[var(--accent-color)] shadow-sm">
                         <i class="fas fa-map-marker-alt text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-[var(--text-main)] mb-3">Visit Clinic</h3>
-                    <p class="text-[var(--text-muted)] text-sm mb-4">Located centrally in the Medical District with ample parking available.</p>
+                    <p class="text-[var(--text-muted)] text-sm mb-4">Located centrally in the Medical District with
+                        ample parking available.</p>
                     <span class="text-sm font-bold text-[var(--text-main)]">450 Wellness Ave, NY 10012</span>
                 </div>
             </div>
@@ -674,11 +704,13 @@
     <!-- ================= MESSAGE FORM ================= -->
     <section id="contact-form" class="py-24 bg-[var(--bg-color)] border-b border-[var(--border-color)] relative">
         <!-- Decorative Background Element -->
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-[var(--bg-secondary)] z-0 hidden lg:block rounded-l-[100px] opacity-50"></div>
-        
+        <div
+            class="absolute top-0 right-0 w-1/3 h-full bg-[var(--bg-secondary)] z-0 hidden lg:block rounded-l-[100px] opacity-50">
+        </div>
+
         <div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
             <div class="grid lg:grid-cols-5 gap-16 items-center">
-                
+
                 <div class="lg:col-span-2 flex flex-col justify-center">
                     <span class="text-[var(--accent-color)] font-extrabold uppercase text-sm mb-4 tracking-widest">
                         Send a Message
@@ -687,19 +719,24 @@
                         How Can We Assist You?
                     </h2>
                     <p class="text-[var(--text-muted)] text-lg leading-relaxed mb-8">
-                        Whether you need help understanding your insurance benefits or want to learn more about a specific therapy program, drop us a line below. Our team typically responds within one business day.
+                        Whether you need help understanding your insurance benefits or want to learn more about a
+                        specific therapy program, drop us a line below. Our team typically responds within one business
+                        day.
                     </p>
-                    <div class="p-6 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl shadow-sm mb-6 flex gap-4 items-start">
+                    <div
+                        class="p-6 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl shadow-sm mb-6 flex gap-4 items-start">
                         <i class="fas fa-clock text-[var(--accent-color)] text-2xl mt-1"></i>
                         <div>
                             <h4 class="font-bold text-[var(--text-main)] mb-1">Standard Office Hours</h4>
-                            <p class="text-sm text-[var(--text-muted)]">Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed</p>
+                            <p class="text-sm text-[var(--text-muted)]">Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday:
+                                9:00 AM - 2:00 PM<br>Sunday: Closed</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="lg:col-span-3">
-                    <div class="bg-[var(--bg-card)] rounded-[40px] p-8 md:p-12 border border-[var(--border-color)] shadow-2xl">
+                    <div
+                        class="bg-[var(--bg-card)] rounded-[40px] p-8 md:p-12 border border-[var(--border-color)] shadow-2xl">
                         <form class="space-y-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
@@ -729,11 +766,14 @@
                                 </div>
                                 <div class="md:col-span-2">
                                     <label class="form-label">Your Message *</label>
-                                    <textarea class="form-control" rows="5" placeholder="How can we help you today?" required></textarea>
+                                    <textarea class="form-control" rows="5" placeholder="How can we help you today?"
+                                        required></textarea>
                                 </div>
                             </div>
                             <div class="pt-4">
-                                <button type="submit" class="btn btn-solid !py-4 !px-12 text-sm shadow-xl !rounded-xl w-full sm:w-auto">Send Message</button>
+                                <button type="submit"
+                                    class="btn btn-solid !py-4 !px-12 text-sm shadow-xl !rounded-xl w-full sm:w-auto">Send
+                                    Message</button>
                             </div>
                         </form>
                     </div>
@@ -757,9 +797,12 @@
                     Easily accessible from major transit routes. We offer validated parking for all patients.
                 </p>
             </div>
-            
-            <div class="bg-[var(--bg-card)] p-4 rounded-[32px] border border-[var(--border-color)] shadow-xl h-[500px] map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0602652150917!2d-74.00806492336338!3d40.71665473463991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a228303f8f1%3A0x7d287bb2014b0b13!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1689000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <div
+                class="bg-[var(--bg-card)] p-4 rounded-[32px] border border-[var(--border-color)] shadow-xl h-[500px] map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0602652150917!2d-74.00806492336338!3d40.71665473463991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a228303f8f1%3A0x7d287bb2014b0b13!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1689000000000!5m2!1sen!2sus"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="hidden">Padding line to maintain exact code length 43</div>
             <div class="hidden">Padding line to maintain exact code length 44</div>
@@ -775,33 +818,44 @@
     <!-- ================= JOIN OUR TEAM SECTION ================= -->
     <section class="py-24 bg-[var(--bg-color)] border-b border-[var(--border-color)]">
         <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
-            <div class="bg-[var(--bg-card)] rounded-[40px] p-12 md:p-16 border border-[var(--border-color)] shadow-2xl flex flex-col md:flex-row items-center justify-between gap-12 relative overflow-hidden">
-                
+            <div
+                class="bg-[var(--bg-card)] rounded-[40px] p-12 md:p-16 border border-[var(--border-color)] shadow-2xl flex flex-col md:flex-row items-center justify-between gap-12 relative overflow-hidden">
+
                 <div class="absolute -right-20 -bottom-20 opacity-5 pointer-events-none">
                     <i class="fas fa-user-md text-[250px]"></i>
                 </div>
 
                 <div class="md:w-2/3 relative z-10">
-                    <span class="text-[var(--accent-color)] font-extrabold uppercase text-sm mb-4 block tracking-widest">
+                    <span
+                        class="text-[var(--accent-color)] font-extrabold uppercase text-sm mb-4 block tracking-widest">
                         Careers
                     </span>
                     <h2 class="text-3xl md:text-4xl font-black text-[var(--text-main)] mb-6 leading-tight">
                         Looking to Join Our Clinical Team?
                     </h2>
                     <p class="text-[var(--text-muted)] text-lg leading-relaxed mb-6">
-                        We are always looking for passionate, certified Speech-Language Pathologists and administrative professionals who are dedicated to patient care and continuous learning.
+                        We are always looking for passionate, certified Speech-Language Pathologists and administrative
+                        professionals who are dedicated to patient care and continuous learning.
                     </p>
                     <ul class="flex flex-wrap gap-4 mb-8">
-                        <li class="bg-[var(--bg-secondary)] px-4 py-2 rounded-full text-sm font-semibold text-[var(--text-main)] border border-[var(--border-color)]">Competitive Salary</li>
-                        <li class="bg-[var(--bg-secondary)] px-4 py-2 rounded-full text-sm font-semibold text-[var(--text-main)] border border-[var(--border-color)]">Full Benefits</li>
-                        <li class="bg-[var(--bg-secondary)] px-4 py-2 rounded-full text-sm font-semibold text-[var(--text-main)] border border-[var(--border-color)]">CEU Stipends</li>
+                        <li
+                            class="bg-[var(--bg-secondary)] px-4 py-2 rounded-full text-sm font-semibold text-[var(--text-main)] border border-[var(--border-color)]">
+                            Competitive Salary</li>
+                        <li
+                            class="bg-[var(--bg-secondary)] px-4 py-2 rounded-full text-sm font-semibold text-[var(--text-main)] border border-[var(--border-color)]">
+                            Full Benefits</li>
+                        <li
+                            class="bg-[var(--bg-secondary)] px-4 py-2 rounded-full text-sm font-semibold text-[var(--text-main)] border border-[var(--border-color)]">
+                            CEU Stipends</li>
                     </ul>
                 </div>
 
                 <div class="md:w-1/3 flex justify-center md:justify-end relative z-10 w-full">
                     <div class="flex flex-col gap-4 w-full sm:w-auto">
-                        <a href="#" class="btn btn-solid !py-5 !px-10 text-sm shadow-xl w-full text-center">View Open Positions</a>
-                        <a href="mailto:careers@talkthera.com" class="btn btn-outline !py-5 !px-10 text-sm w-full text-center">Email Resume</a>
+                        <a href="#" class="btn btn-solid !py-5 !px-10 text-sm shadow-xl w-full text-center">View Open
+                            Positions</a>
+                        <a href="mailto:careers@talkthera.com"
+                            class="btn btn-outline !py-5 !px-10 text-sm w-full text-center">Email Resume</a>
                     </div>
                 </div>
             </div>
@@ -826,14 +880,18 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-10 pt-4">
                 <div class="lg:col-span-4">
                     <div class="mb-6">
-                        <a href="index.html" class="inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight uppercase"
+                        <a href="index.html"
+                            class="inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight uppercase"
                             style="color: var(--text-main) !important; text-decoration: none;">
-                            <i class="fas fa-comment-medical" style="color: var(--accent-color); font-size: 1.4rem;"></i>
+                            <i class="fas fa-comment-medical"
+                                style="color: var(--accent-color); font-size: 1.4rem;"></i>
                             TALKTHERA
                         </a>
                     </div>
-                    <p class="opacity-80 leading-relaxed text-sm font-medium mb-8 max-w-sm" style="color: var(--text-muted);">
-                        Dedicated to helping individuals of all ages develop effective communication skills. Our licensed therapists provide personalized treatment plans for lasting results.
+                    <p class="opacity-80 leading-relaxed text-sm font-medium mb-8 max-w-sm"
+                        style="color: var(--text-muted);">
+                        Dedicated to helping individuals of all ages develop effective communication skills. Our
+                        licensed therapists provide personalized treatment plans for lasting results.
                     </p>
                     <div class="flex space-x-4">
                         <a href="#" class="social-link-circle"><i class="fab fa-instagram"></i></a>
@@ -842,7 +900,7 @@
                         <a href="#" class="social-link-circle"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="lg:col-span-8">
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
                         <div>
@@ -869,23 +927,27 @@
                             <h4>Main Center</h4>
                             <ul class="space-y-4 text-[var(--text-muted)] text-sm font-medium">
                                 <li class="flex items-start gap-4">
-                                    <i class="fas fa-map-marker-alt mt-1 shrink-0" style="color: var(--accent-color);"></i>
+                                    <i class="fas fa-map-marker-alt mt-1 shrink-0"
+                                        style="color: var(--accent-color);"></i>
                                     <span>450 Wellness Avenue<br>Therapy District, NY 10012</span>
                                 </li>
                                 <li class="flex items-center gap-4">
                                     <i class="fas fa-phone shrink-0" style="color: var(--accent-color);"></i>
-                                    <a href="tel:+15550198" class="break-all hover:text-[var(--accent-color)]">+1 (555) 800-TALK</a>
+                                    <a href="tel:+15550198" class="break-all hover:text-[var(--accent-color)]">+1 (555)
+                                        800-TALK</a>
                                 </li>
                                 <li class="flex items-center gap-4">
                                     <i class="fas fa-envelope shrink-0" style="color: var(--accent-color);"></i>
-                                    <a href="contact.html" class="break-all hover:text-[var(--accent-color)]">hello@talkthera.com</a>
+                                    <a href="contact.html"
+                                        class="break-all hover:text-[var(--accent-color)]">hello@talkthera.com</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom flex flex-col md:flex-row justify-between items-center text-xs gap-6 font-semibold uppercase tracking-widest">
+            <div
+                class="footer-bottom flex flex-col md:flex-row justify-between items-center text-xs gap-6 font-semibold uppercase tracking-widest">
                 <p style="color: var(--text-muted);">&copy; 2026 TALKTHERA Services. All rights reserved.</p>
                 <div class="flex flex-wrap justify-center gap-6 sm:gap-8">
                     <a href="#">Terms of Service</a>
@@ -976,4 +1038,5 @@
         if (rtlMobile) rtlMobile.onclick = toggleRTL;
     </script>
 </body>
+
 </html>

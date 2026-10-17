@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speech & Language Therapy Center - Blog</title>
     <script src="tailwind.js"></script>
+    <link rel="icon" type="image/jpeg" href="images\images (6).png">
+    <link rel="icon" type="image/png" href="images\images (6).png">
     <link rel="icon" type="image/png" href="images\images.jpg">
     <script>
         tailwind.config = {
@@ -90,8 +92,13 @@
         }
 
         @keyframes subtleZoom {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.05); }
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.05);
+            }
         }
 
         .animate-zoom {
@@ -503,7 +510,7 @@
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             z-index: 10;
         }
 
@@ -595,7 +602,8 @@
     <nav class="navbar" id="main-nav">
         <div class="w-full flex items-center justify-between mx-auto">
             <div class="flex items-center flex-shrink-0">
-                <a href="index.html" class="inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight uppercase"
+                <a href="index.html"
+                    class="inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight uppercase"
                     style="color: var(--text-main) !important; text-decoration: none;">
                     <i class="fas fa-comment-medical" style="color: var(--accent-color); font-size: 1.4rem;"></i>
                     TALKTHERA
@@ -656,7 +664,7 @@
                 <i class="fas fa-times"></i>
             </button>
         </div>
-        
+
         <div class="flex flex-col w-full overflow-y-auto flex-1 py-4">
             <a href="index.html" class="mobile-link">Home Page 1</a>
             <a href="home-2.html" class="mobile-link">Home Page 2</a>
@@ -668,10 +676,12 @@
             <a href="doctors.html" class="mobile-link">Doctors</a>
             <a href="contact.html" class="mobile-link">Contact</a>
         </div>
-        <div class="w-full px-8 py-8 border-t border-[var(--border-color)] flex flex-col gap-6 shrink-0 bg-[var(--bg-secondary)]">
+        <div
+            class="w-full px-8 py-8 border-t border-[var(--border-color)] flex flex-col gap-6 shrink-0 bg-[var(--bg-secondary)]">
             <div class="flex justify-between items-center w-full">
                 <div class="flex items-center gap-3">
-                    <span class="text-[var(--text-muted)] font-medium text-[10px] uppercase tracking-widest">Theme</span>
+                    <span
+                        class="text-[var(--text-muted)] font-medium text-[10px] uppercase tracking-widest">Theme</span>
                     <button id="theme-toggle-mobile" class="icon-btn">
                         <i class="fas fa-moon" id="theme-icon-mobile"></i>
                     </button>
@@ -685,17 +695,22 @@
     </div>
 
     <!-- ================= HERO BANNER ================= -->
-    <section class="relative w-full h-[100dvh] flex items-center justify-center overflow-hidden border-b border-[var(--border-color)] bg-[var(--bg-color)]">
+    <section
+        class="relative w-full h-[100dvh] flex items-center justify-center overflow-hidden border-b border-[var(--border-color)] bg-[var(--bg-color)]">
 
         <div class="absolute inset-0 z-0">
             <img src="images\pexels-tima-miroshnichenko-6860473.jpg" alt="Therapy Blog"
                 class="w-full h-full object-cover animate-zoom" />
-            <div class="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-slate-900/70 to-slate-900/90 dark:from-slate-900/95 dark:via-slate-900/80 dark:to-black backdrop-blur-[2px]"></div>
+            <div
+                class="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-slate-900/70 to-slate-900/90 dark:from-slate-900/95 dark:via-slate-900/80 dark:to-black backdrop-blur-[2px]">
+            </div>
         </div>
 
-        <div class="max-w-[1000px] mx-auto px-6 w-full flex flex-col items-center justify-center text-center relative z-10 mt-12 py-16">
+        <div
+            class="max-w-[1000px] mx-auto px-6 w-full flex flex-col items-center justify-center text-center relative z-10 mt-12 py-16">
 
-            <span class="bg-blue-600/20 text-blue-200 border border-blue-500/30 text-xs font-bold uppercase tracking-[0.25em] mb-8 px-6 py-2 rounded-full shadow-lg flex items-center gap-2 backdrop-blur-md">
+            <span
+                class="bg-blue-600/20 text-blue-200 border border-blue-500/30 text-xs font-bold uppercase tracking-[0.25em] mb-8 px-6 py-2 rounded-full shadow-lg flex items-center gap-2 backdrop-blur-md">
                 <i class="fas fa-book-open text-lg"></i> Resources & Insights
             </span>
 
@@ -705,12 +720,15 @@
             </h1>
 
             <p class="text-slate-200 text-lg md:text-xl leading-relaxed max-w-2xl font-light mb-10 drop-shadow-md">
-                Expert advice, success stories, and the latest research in speech and language pathology curated by our clinical team.
+                Expert advice, success stories, and the latest research in speech and language pathology curated by our
+                clinical team.
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
                 <a href="#latest-posts" class="btn btn-solid !py-4 !px-10 text-sm !rounded-md">Read Latest Posts</a>
-                <a href="contact.html" class="btn !bg-white/10 !text-white hover:!bg-white/20 border border-white/20 !py-4 !px-10 text-sm backdrop-blur-md !rounded-md shadow-md">Subscribe Newsletter</a>
+                <a href="contact.html"
+                    class="btn !bg-white/10 !text-white hover:!bg-white/20 border border-white/20 !py-4 !px-10 text-sm backdrop-blur-md !rounded-md shadow-md">Subscribe
+                    Newsletter</a>
             </div>
         </div>
     </section>
@@ -718,7 +736,7 @@
     <!-- ================= BLOG GRID SECTION ================= -->
     <section id="latest-posts" class="py-24 bg-[var(--bg-secondary)] border-b border-[var(--border-color)]">
         <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
-            
+
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-[var(--accent-color)] font-extrabold uppercase text-sm mb-4 block tracking-widest">
                     Expert Insights
@@ -732,7 +750,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                
+
                 <!-- Blog Card 1 -->
                 <div class="blog-card-modern">
                     <span class="blog-category-badge">Pediatrics</span>
@@ -742,8 +760,10 @@
                     <div class="blog-content-box">
                         <div class="blog-date"><i class="far fa-calendar-alt"></i> Oct 12, 2026</div>
                         <h3>5 Play-Based Activities to Boost Toddler Speech</h3>
-                        <p>Discover simple, engaging games you can play at home to naturally encourage your toddler's vocabulary and expressive language skills.</p>
-                        <a href="services-details.html" class="blog-read-more">View Now <i class="fas fa-arrow-right"></i></a>
+                        <p>Discover simple, engaging games you can play at home to naturally encourage your toddler's
+                            vocabulary and expressive language skills.</p>
+                        <a href="services-details.html" class="blog-read-more">View Now <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -756,8 +776,10 @@
                     <div class="blog-content-box">
                         <div class="blog-date"><i class="far fa-calendar-alt"></i> Oct 05, 2026</div>
                         <h3>Understanding Aphasia Recovery Timelines</h3>
-                        <p>A comprehensive guide for families navigating the complexities of post-stroke language recovery and setting realistic therapeutic expectations.</p>
-                        <a href="services-details.html" class="blog-read-more">View Now <i class="fas fa-arrow-right"></i></a>
+                        <p>A comprehensive guide for families navigating the complexities of post-stroke language
+                            recovery and setting realistic therapeutic expectations.</p>
+                        <a href="services-details.html" class="blog-read-more">View Now <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -770,8 +792,10 @@
                     <div class="blog-content-box">
                         <div class="blog-date"><i class="far fa-calendar-alt"></i> Sep 28, 2026</div>
                         <h3>Protecting Your Voice: Tips for Teachers</h3>
-                        <p>Educators are highly susceptible to vocal strain. Learn preventative vocal hygiene techniques to maintain a strong, healthy voice all year.</p>
-                        <a href="services-details.html" class="blog-read-more">View Now <i class="fas fa-arrow-right"></i></a>
+                        <p>Educators are highly susceptible to vocal strain. Learn preventative vocal hygiene techniques
+                            to maintain a strong, healthy voice all year.</p>
+                        <a href="services-details.html" class="blog-read-more">View Now <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -784,8 +808,10 @@
                     <div class="blog-content-box">
                         <div class="blog-date"><i class="far fa-calendar-alt"></i> Sep 15, 2026</div>
                         <h3>Is Telehealth Speech Therapy Effective?</h3>
-                        <p>We break down recent clinical studies comparing virtual therapy outcomes to traditional in-clinic models for various age groups.</p>
-                        <a href="services-details.html" class="blog-read-more">View Now <i class="fas fa-arrow-right"></i></a>
+                        <p>We break down recent clinical studies comparing virtual therapy outcomes to traditional
+                            in-clinic models for various age groups.</p>
+                        <a href="services-details.html" class="blog-read-more">View Now <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -798,8 +824,10 @@
                     <div class="blog-content-box">
                         <div class="blog-date"><i class="far fa-calendar-alt"></i> Sep 02, 2026</div>
                         <h3>Demystifying AAC Devices for Parents</h3>
-                        <p>Augmentative and Alternative Communication (AAC) tools can unlock a child's potential. Here is everything parents need to know to get started.</p>
-                        <a href="services-details.html" class="blog-read-more">View Now <i class="fas fa-arrow-right"></i></a>
+                        <p>Augmentative and Alternative Communication (AAC) tools can unlock a child's potential. Here
+                            is everything parents need to know to get started.</p>
+                        <a href="services-details.html" class="blog-read-more">View Now <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -812,8 +840,10 @@
                     <div class="blog-content-box">
                         <div class="blog-date"><i class="far fa-calendar-alt"></i> Aug 20, 2026</div>
                         <h3>Identifying Early Signs of Dysphagia</h3>
-                        <p>Difficulty swallowing can lead to serious health issues. Learn the subtle warning signs of dysphagia that warrant an immediate clinical evaluation.</p>
-                        <a href="services-details.html" class="blog-read-more">View Now <i class="fas fa-arrow-right"></i></a>
+                        <p>Difficulty swallowing can lead to serious health issues. Learn the subtle warning signs of
+                            dysphagia that warrant an immediate clinical evaluation.</p>
+                        <a href="services-details.html" class="blog-read-more">View Now <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -824,27 +854,37 @@
     <!-- ================= SECTION 2: NEWSLETTER SIGNUP ================= -->
     <section class="py-24 bg-[var(--bg-color)] border-b border-[var(--border-color)]">
         <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
-            <div class="bg-[var(--bg-card)] rounded-[40px] p-12 lg:p-20 border border-[var(--border-color)] shadow-2xl relative overflow-hidden text-center">
+            <div
+                class="bg-[var(--bg-card)] rounded-[40px] p-12 lg:p-20 border border-[var(--border-color)] shadow-2xl relative overflow-hidden text-center">
                 <!-- Decorative background elements -->
-                <div class="absolute top-0 right-0 w-64 h-64 bg-blue-50 dark:bg-blue-900/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                <div class="absolute bottom-0 left-0 w-64 h-64 bg-indigo-50 dark:bg-indigo-900/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-                
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-blue-50 dark:bg-blue-900/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-64 h-64 bg-indigo-50 dark:bg-indigo-900/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2">
+                </div>
+
                 <div class="relative z-10 max-w-2xl mx-auto flex flex-col items-center">
-                    <div class="w-20 h-20 bg-[var(--bg-secondary)] rounded-full flex items-center justify-center text-[var(--accent-color)] mb-8 shadow-sm border border-[var(--border-color)]">
+                    <div
+                        class="w-20 h-20 bg-[var(--bg-secondary)] rounded-full flex items-center justify-center text-[var(--accent-color)] mb-8 shadow-sm border border-[var(--border-color)]">
                         <i class="fas fa-envelope-open-text text-3xl"></i>
                     </div>
                     <h2 class="text-4xl font-black text-[var(--text-main)] mb-6 leading-tight">
                         Stay Updated with TALKTHERA
                     </h2>
                     <p class="text-[var(--text-muted)] text-lg leading-relaxed mb-10">
-                        Join our community newsletter to receive monthly clinical tips, free communication resources, and updates on our latest therapeutic programs directly in your inbox.
+                        Join our community newsletter to receive monthly clinical tips, free communication resources,
+                        and updates on our latest therapeutic programs directly in your inbox.
                     </p>
-                    
+
                     <form class="w-full flex flex-col sm:flex-row gap-4">
-                        <input type="email" placeholder="Enter your email address" class="flex-grow px-6 py-4 rounded-xl border border-[var(--border-color)] bg-[var(--bg-color)] text-[var(--text-main)] focus:outline-none focus:border-[var(--accent-color)] transition-colors shadow-inner" required>
+                        <input type="email" placeholder="Enter your email address"
+                            class="flex-grow px-6 py-4 rounded-xl border border-[var(--border-color)] bg-[var(--bg-color)] text-[var(--text-main)] focus:outline-none focus:border-[var(--accent-color)] transition-colors shadow-inner"
+                            required>
                         <button type="submit" class="btn btn-solid !py-4 !px-10 rounded-xl shadow-lg">Subscribe</button>
                     </form>
-                    <p class="text-xs text-[var(--text-muted)] mt-6 uppercase tracking-wider font-semibold">We respect your privacy. No spam, ever.</p>
+                    <p class="text-xs text-[var(--text-muted)] mt-6 uppercase tracking-wider font-semibold">We respect
+                        your privacy. No spam, ever.</p>
                 </div>
             </div>
             <div class="hidden">Padding line to maintain precise output line count criteria 43</div>
@@ -871,36 +911,48 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <a href="#" class="bg-[var(--bg-card)] p-8 rounded-3xl border border-[var(--border-color)] shadow-sm flex flex-col items-center text-center hover:-translate-y-2 hover:border-[var(--accent-color)] transition-all group">
-                    <div class="w-16 h-16 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center text-[var(--accent-color)] mb-4 group-hover:scale-110 transition-transform">
+                <a href="#"
+                    class="bg-[var(--bg-card)] p-8 rounded-3xl border border-[var(--border-color)] shadow-sm flex flex-col items-center text-center hover:-translate-y-2 hover:border-[var(--accent-color)] transition-all group">
+                    <div
+                        class="w-16 h-16 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center text-[var(--accent-color)] mb-4 group-hover:scale-110 transition-transform">
                         <i class="fas fa-child text-2xl"></i>
                     </div>
                     <h4 class="font-bold text-[var(--text-main)] mb-1">Pediatrics</h4>
-                    <span class="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">24 Articles</span>
+                    <span class="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">24
+                        Articles</span>
                 </a>
-                
-                <a href="#" class="bg-[var(--bg-card)] p-8 rounded-3xl border border-[var(--border-color)] shadow-sm flex flex-col items-center text-center hover:-translate-y-2 hover:border-[var(--accent-color)] transition-all group">
-                    <div class="w-16 h-16 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center text-[var(--accent-color)] mb-4 group-hover:scale-110 transition-transform">
+
+                <a href="#"
+                    class="bg-[var(--bg-card)] p-8 rounded-3xl border border-[var(--border-color)] shadow-sm flex flex-col items-center text-center hover:-translate-y-2 hover:border-[var(--accent-color)] transition-all group">
+                    <div
+                        class="w-16 h-16 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center text-[var(--accent-color)] mb-4 group-hover:scale-110 transition-transform">
                         <i class="fas fa-user-md text-2xl"></i>
                     </div>
                     <h4 class="font-bold text-[var(--text-main)] mb-1">Adult Rehab</h4>
-                    <span class="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">18 Articles</span>
+                    <span class="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">18
+                        Articles</span>
                 </a>
 
-                <a href="#" class="bg-[var(--bg-card)] p-8 rounded-3xl border border-[var(--border-color)] shadow-sm flex flex-col items-center text-center hover:-translate-y-2 hover:border-[var(--accent-color)] transition-all group">
-                    <div class="w-16 h-16 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center text-[var(--accent-color)] mb-4 group-hover:scale-110 transition-transform">
+                <a href="#"
+                    class="bg-[var(--bg-card)] p-8 rounded-3xl border border-[var(--border-color)] shadow-sm flex flex-col items-center text-center hover:-translate-y-2 hover:border-[var(--accent-color)] transition-all group">
+                    <div
+                        class="w-16 h-16 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center text-[var(--accent-color)] mb-4 group-hover:scale-110 transition-transform">
                         <i class="fas fa-tablet-alt text-2xl"></i>
                     </div>
                     <h4 class="font-bold text-[var(--text-main)] mb-1">AAC Tech</h4>
-                    <span class="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">12 Articles</span>
+                    <span class="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">12
+                        Articles</span>
                 </a>
 
-                <a href="#" class="bg-[var(--bg-card)] p-8 rounded-3xl border border-[var(--border-color)] shadow-sm flex flex-col items-center text-center hover:-translate-y-2 hover:border-[var(--accent-color)] transition-all group">
-                    <div class="w-16 h-16 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center text-[var(--accent-color)] mb-4 group-hover:scale-110 transition-transform">
+                <a href="#"
+                    class="bg-[var(--bg-card)] p-8 rounded-3xl border border-[var(--border-color)] shadow-sm flex flex-col items-center text-center hover:-translate-y-2 hover:border-[var(--accent-color)] transition-all group">
+                    <div
+                        class="w-16 h-16 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center text-[var(--accent-color)] mb-4 group-hover:scale-110 transition-transform">
                         <i class="fas fa-heartbeat text-2xl"></i>
                     </div>
                     <h4 class="font-bold text-[var(--text-main)] mb-1">Voice Care</h4>
-                    <span class="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">15 Articles</span>
+                    <span class="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">15
+                        Articles</span>
                 </a>
             </div>
             <div class="hidden">Padding line to maintain precise output line count criteria 44</div>
@@ -919,14 +971,18 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-10 pt-4">
                 <div class="lg:col-span-4">
                     <div class="mb-6">
-                        <a href="index.html" class="inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight uppercase"
+                        <a href="index.html"
+                            class="inline-flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight uppercase"
                             style="color: var(--text-main) !important; text-decoration: none;">
-                            <i class="fas fa-comment-medical" style="color: var(--accent-color); font-size: 1.4rem;"></i>
+                            <i class="fas fa-comment-medical"
+                                style="color: var(--accent-color); font-size: 1.4rem;"></i>
                             TALKTHERA
                         </a>
                     </div>
-                    <p class="opacity-80 leading-relaxed text-sm font-medium mb-8 max-w-sm" style="color: var(--text-muted);">
-                        Dedicated to helping individuals of all ages develop effective communication skills. Our licensed therapists provide personalized treatment plans for lasting results.
+                    <p class="opacity-80 leading-relaxed text-sm font-medium mb-8 max-w-sm"
+                        style="color: var(--text-muted);">
+                        Dedicated to helping individuals of all ages develop effective communication skills. Our
+                        licensed therapists provide personalized treatment plans for lasting results.
                     </p>
                     <div class="flex space-x-4">
                         <a href="#" class="social-link-circle"><i class="fab fa-instagram"></i></a>
@@ -935,7 +991,7 @@
                         <a href="#" class="social-link-circle"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="lg:col-span-8">
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
                         <div>
@@ -962,23 +1018,27 @@
                             <h4>Main Center</h4>
                             <ul class="space-y-4 text-[var(--text-muted)] text-sm font-medium">
                                 <li class="flex items-start gap-4">
-                                    <i class="fas fa-map-marker-alt mt-1 shrink-0" style="color: var(--accent-color);"></i>
+                                    <i class="fas fa-map-marker-alt mt-1 shrink-0"
+                                        style="color: var(--accent-color);"></i>
                                     <span>450 Wellness Avenue<br>Therapy District, NY 10012</span>
                                 </li>
                                 <li class="flex items-center gap-4">
                                     <i class="fas fa-phone shrink-0" style="color: var(--accent-color);"></i>
-                                    <a href="tel:+15550198" class="break-all hover:text-[var(--accent-color)]">+1 (555) 800-TALK</a>
+                                    <a href="tel:+15550198" class="break-all hover:text-[var(--accent-color)]">+1 (555)
+                                        800-TALK</a>
                                 </li>
                                 <li class="flex items-center gap-4">
                                     <i class="fas fa-envelope shrink-0" style="color: var(--accent-color);"></i>
-                                    <a href="contact.html" class="break-all hover:text-[var(--accent-color)]">hello@talkthera.com</a>
+                                    <a href="contact.html"
+                                        class="break-all hover:text-[var(--accent-color)]">hello@talkthera.com</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom flex flex-col md:flex-row justify-between items-center text-xs gap-6 font-semibold uppercase tracking-widest">
+            <div
+                class="footer-bottom flex flex-col md:flex-row justify-between items-center text-xs gap-6 font-semibold uppercase tracking-widest">
                 <p style="color: var(--text-muted);">&copy; 2026 TALKTHERA Services. All rights reserved.</p>
                 <div class="flex flex-wrap justify-center gap-6 sm:gap-8">
                     <a href="#">Terms of Service</a>
@@ -1069,4 +1129,5 @@
         if (rtlMobile) rtlMobile.onclick = toggleRTL;
     </script>
 </body>
+
 </html>
